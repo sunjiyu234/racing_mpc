@@ -1,0 +1,8 @@
+prefix=/home/sun234/racing_work/install
+
+Name: LearningMPC
+Description: Description of LearningMPC
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lLearningMPC
+Requires: roscpp rospy

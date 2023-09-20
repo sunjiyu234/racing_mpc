@@ -1,0 +1,2 @@
+LearningMPC-master:racecar_simulator
+-DCATKIN_DEVEL_PREFIX=/home/sun234/racing_work/devel -DCMAKE_INSTALL_PREFIX=/home/sun234/racing_work/install -G Unix Makefiles

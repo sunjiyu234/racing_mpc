@@ -1,0 +1,8 @@
+prefix=/home/sun234/racing_work/install
+
+Name: racecar_simulator
+Description: Description of racecar_simulator
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lracecar_simulator
+Requires: message_runtime

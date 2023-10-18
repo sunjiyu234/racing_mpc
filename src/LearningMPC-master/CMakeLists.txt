@@ -125,11 +125,11 @@ include_directories(
 
 )
 
-add_executable(LMPC src/LMPC.cpp)
+add_executable(LMPC src/LMPC_dspace.cpp)
 target_link_libraries(LMPC ${catkin_LIBRARIES})
 add_dependencies(LMPC ${catkin_EXPORTED_TARGETS})
 
-add_executable(record_init_ss src/record_initial_safe_set.cpp)
+add_executable(record_init_ss src/record_initial_safe_set_dspace.cpp)
 target_link_libraries(record_init_ss ${catkin_LIBRARIES})
 add_dependencies(record_init_ss ${catkin_EXPORTED_TARGETS})
 

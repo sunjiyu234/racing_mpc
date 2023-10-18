@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="dspace_connect" type="vehicleStatus" name="vehicleStatus" output="screen" />
+</launch>

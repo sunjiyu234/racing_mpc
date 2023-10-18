@@ -90,7 +90,7 @@ nav_msgs/OccupancyGrid.h
 LearningMPC/occupancy_grid.h
 -
 
-/home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set.cpp
+/home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set_dspace.cpp
 ros/ros.h
 -
 nav_msgs/Odometry.h

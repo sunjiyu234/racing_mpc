@@ -57,38 +57,38 @@ include LearningMPC-master/CMakeFiles/record_init_ss.dir/progress.make
 # Include the compile flags for this target's objects.
 include LearningMPC-master/CMakeFiles/record_init_ss.dir/flags.make
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o: LearningMPC-master/CMakeFiles/record_init_ss.dir/flags.make
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o: /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o"
-	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o -c /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set.cpp
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o: LearningMPC-master/CMakeFiles/record_init_ss.dir/flags.make
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o: /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set_dspace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o"
+	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o -c /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set_dspace.cpp
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.i"
-	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set.cpp > CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.i
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.i"
+	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set_dspace.cpp > CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.i
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.s"
-	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set.cpp -o CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.s
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.s"
+	cd /home/sun234/racing_work/build/LearningMPC-master && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/LearningMPC-master/src/record_initial_safe_set_dspace.cpp -o CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.s
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.requires:
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.requires:
 
-.PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.requires
+.PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.requires
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.provides: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.requires
-	$(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.provides.build
-.PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.provides
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.provides: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.requires
+	$(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.provides.build
+.PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.provides
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.provides.build: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o
+LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.provides.build: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o
 
 
 # Object files for target record_init_ss
 record_init_ss_OBJECTS = \
-"CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o"
+"CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o"
 
 # External object files for target record_init_ss
 record_init_ss_EXTERNAL_OBJECTS =
 
-/home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o
+/home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o
 /home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss: LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make
 /home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss: /opt/ros/melodic/lib/libroscpp.so
 /home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -117,7 +117,7 @@ LearningMPC-master/CMakeFiles/record_init_ss.dir/build: /home/sun234/racing_work
 
 .PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/build
 
-LearningMPC-master/CMakeFiles/record_init_ss.dir/requires: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o.requires
+LearningMPC-master/CMakeFiles/record_init_ss.dir/requires: LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o.requires
 
 .PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/requires
 

@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="dspace_connect" type="canread" name="canread" output="screen" />
+    <node pkg="joy" type="joy_node" name="joy_node" output="screen" />
+    <node pkg="dspace_connect" type="vehicleStatus" name="vehicleStatus" output="screen" />
+</launch>

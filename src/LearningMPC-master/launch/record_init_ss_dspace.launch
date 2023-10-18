@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load all parameters -->
+  <rosparam command="load" file="$(find LearningMPC)/Lmpc_params_dspace.yaml"/>
+  <param name="waypoint_file" value ="$(find LearningMPC)/data/centerline_waypoints_handling_course.csv"/>
+  <!-- Launch the learning MPC -->
+  <node pkg="LearningMPC" name="record_init_ss" type="record_init_ss" output="screen">
+  </node>
+
+</launch>

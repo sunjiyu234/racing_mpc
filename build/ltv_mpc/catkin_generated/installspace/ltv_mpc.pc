@@ -1,0 +1,8 @@
+prefix=/home/sun234/racing_work/install
+
+Name: ltv_mpc
+Description: Description of ltv_mpc
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

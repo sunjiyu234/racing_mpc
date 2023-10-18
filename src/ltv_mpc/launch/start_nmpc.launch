@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="ltv_mpc" type="controller_nmpc" name="controller_nmpc" output="screen" />
+</launch>

@@ -132,6 +132,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/sun234/racing_work/build/gtest/cmake_install.cmake")
   include("/home/sun234/racing_work/build/LearningMPC-master/cmake_install.cmake")
+  include("/home/sun234/racing_work/build/dspace_connect/cmake_install.cmake")
+  include("/home/sun234/racing_work/build/ltv_mpc/cmake_install.cmake")
   include("/home/sun234/racing_work/build/racecar_simulator/cmake_install.cmake")
 
 endif()

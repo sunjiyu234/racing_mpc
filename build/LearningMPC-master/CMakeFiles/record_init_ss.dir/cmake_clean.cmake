@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o"
+  "CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o"
   "/home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss.pdb"
   "/home/sun234/racing_work/devel/lib/LearningMPC/record_init_ss"
 )

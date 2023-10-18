@@ -30,20 +30,20 @@
 #include <LearningMPC/occupancy_grid.h>
 
 const int SEARCH_RANGE = 10;
-const double HALF_WIDTH_MAX = 0.8;
+const double HALF_WIDTH_MAX = 5.0;
 using namespace std;
 
 typedef struct Point_ref{
     double x;
     double y;
     double theta;  // theta represents progress along centerline_points， s
-    double left_half_width;
-    double right_half_width;
+    double left_half_width = HALF_WIDTH_MAX;
+    double right_half_width = HALF_WIDTH_MAX;
 }Point_ref;
 
 class Track{
 public:
-    vector<Point_ref> centerline_points;
+    vector<Point_ref> centerline_points;   // X Y  THETA    
     tk::spline X_spline;
     tk::spline Y_spline;
     double length;
@@ -58,13 +58,13 @@ public:
         CSVReader reader(file_name);
         ROS_INFO("End 1 ...");
         // Get the data from CSV File
-        std::vector<std::vector<std::string> > dataList = reader.getData();
+        std::vector<std::vector<std::string> > dataList = reader.getData();    // get csv to vector<vector<string>>
         // Print the content of row by row on screen
+        geometry_msgs::Point wp;
         for(std::vector<std::string> vec : dataList){
-            geometry_msgs::Point wp;
             wp.x = std::stof(vec.at(0));
             wp.y = std::stof(vec.at(1));
-            waypoints.push_back(wp);
+            waypoints.push_back(wp);  // string to float : vector<geometry_msgs:: Point>
         }
         ROS_INFO("End 2 ...");
         /*** process raw waypoints data, extract equally spaced points ***/
@@ -72,10 +72,11 @@ public:
         int next =1;
         Point_ref p_start;
         p_start.x = waypoints.at(0).x; p_start.y = waypoints.at(0).y; p_start.theta = 0.0;
-        centerline_points.push_back(p_start);
+        centerline_points.push_back(p_start);  // pstart
         float theta = 0.0;
         ROS_INFO("End 3 ...");
         // 计算frenet坐标系参考s
+        Point_ref p;
         while(next < waypoints.size()){
             float dist = sqrt(pow(waypoints.at(next).x-waypoints.at(curr).x, 2)
                     +pow(waypoints.at(next).y-waypoints.at(curr).y, 2));
@@ -83,7 +84,6 @@ public:
                                        +pow(waypoints.at(next).y-waypoints.at(0).y, 2));
             if (dist>space){
                 theta += dist;
-                Point_ref p;
                 p.x = waypoints.at(next).x; p.y = waypoints.at(next).y; p.theta = theta;
                 p.left_half_width = p.right_half_width = HALF_WIDTH_MAX;
                 centerline_points.push_back(p);
@@ -98,7 +98,98 @@ public:
         ROS_INFO("End 4 ...");
         double last_space = sqrt(pow(centerline_points.back().x-waypoints.at(0).x, 2)
                                  +pow(centerline_points.back().y-waypoints.at(0).y, 2));
-        length = theta + last_space;
+        length = theta + last_space;   // total_length
+        // 插值最后两个点
+        Point_ref p_last, p_second_last;
+        p_last.x = waypoints.at(0).x; p_last.y = waypoints.at(0).y; p_last.theta = length;
+        p_second_last.x = 0.5*(centerline_points.back().x + p_last.x);
+        p_second_last.y = 0.5*(centerline_points.back().y + p_last.y);
+        p_second_last.theta = length - 0.5*last_space;
+
+        if(last_space > space) {
+            centerline_points.push_back(p_second_last);
+        }
+        centerline_points.push_back(p_last);   //close the loop
+        ROS_INFO("End 5 ...");
+
+        vector<double> X;
+        vector<double> Y;
+        vector<double> thetas;
+        for (int i=0; i<centerline_points.size(); i++){
+            X.push_back(centerline_points.at(i).x);
+            Y.push_back(centerline_points.at(i).y);
+            thetas.push_back(centerline_points.at(i).theta);
+        }
+
+        X_spline.set_points(thetas, X);
+        Y_spline.set_points(thetas, Y);
+        /** if sparse, reinitialize centerline points such that they are densely and equally spaced **/
+        Point_ref p_new;
+        if (sparse) {
+            double s=0;
+            centerline_points.clear();
+            ROS_INFO("clear here");
+            while (s<length){
+                p_new.x = X_spline(s);
+                p_new.y = Y_spline(s);
+                p_new.theta = s;
+                s += space;
+                centerline_points.push_back(p_new);
+            }
+        }
+        ROS_INFO("End 6 ...");
+        // initialize_width(); // 在栅格地图中搜索每个点的左右宽度
+        ROS_INFO("End 7 ...");
+    }
+
+    Track(string file_name, bool sparse=false) : space(0.05){
+        space = 0.05;
+        centerline_points.clear();
+        vector<geometry_msgs::Point> waypoints;
+        CSVReader reader(file_name);
+        ROS_INFO("End 1 ...");
+        // Get the data from CSV File
+        std::vector<std::vector<std::string> > dataList = reader.getData();    // get csv to vector<vector<string>>
+        // Print the content of row by row on screen
+        for(std::vector<std::string> vec : dataList){
+            geometry_msgs::Point wp;
+            wp.x = std::stof(vec.at(0));
+            wp.y = std::stof(vec.at(1));
+            waypoints.push_back(wp);  // string to float : vector<geometry_msgs:: Point>
+        }
+        ROS_INFO("End 2 ...");
+        /*** process raw waypoints data, extract equally spaced points ***/
+        int curr = 0;
+        int next =1;
+        Point_ref p_start;
+        p_start.x = waypoints.at(0).x; p_start.y = waypoints.at(0).y; p_start.theta = 0.0;
+        centerline_points.push_back(p_start);  // pstart
+        float theta = 0.0;
+        ROS_INFO("End 3 ...");
+        // 计算frenet坐标系参考s
+        Point_ref p;
+        while(next < waypoints.size()){
+            float dist = sqrt(pow(waypoints.at(next).x-waypoints.at(curr).x, 2)
+                    +pow(waypoints.at(next).y-waypoints.at(curr).y, 2));
+            float dist_to_start = sqrt(pow(waypoints.at(next).x-waypoints.at(0).x, 2)
+                                       +pow(waypoints.at(next).y-waypoints.at(0).y, 2));
+            if (dist>space){
+                theta += dist;
+                p.x = waypoints.at(next).x; p.y = waypoints.at(next).y; p.theta = theta;
+                p.left_half_width = p.right_half_width = HALF_WIDTH_MAX;
+                centerline_points.push_back(p);
+                curr = next;
+            }
+            next++;
+            // terminate when finished a lap
+            if (next > waypoints.size()/2 && dist_to_start<space){
+                break;
+            }
+        }
+        ROS_INFO("End 4 ...");
+        double last_space = sqrt(pow(centerline_points.back().x-waypoints.at(0).x, 2)
+                                 +pow(centerline_points.back().y-waypoints.at(0).y, 2));
+        length = theta + last_space;   // total_length
         // 插值最后两个点
         Point_ref p_last, p_second_last;
         p_last.x = waypoints.at(0).x; p_last.y = waypoints.at(0).y; p_last.theta = length;
@@ -126,16 +217,18 @@ public:
         Y_spline.set_points(thetas, Y);
 
         /** if sparse, reinitialize centerline points such that they are densely and equally spaced **/
+        Point_ref p_new;
         if (sparse) {
             double s=0;
             centerline_points.clear();
             while (s<length){
-                Point_ref p;
-                p.x = X_spline(s);
-                p.y = Y_spline(s);
-                p.theta = s;
+                p_new.x = X_spline(s);
+                p_new.y = Y_spline(s);
+                p_new.theta = s;
+                // p.left_half_width = HALF_WIDTH_MAX;
+                // p.right_half_width = HALF_WIDTH_MAX;
                 s += space;
-                centerline_points.push_back(p);
+                centerline_points.push_back(p_new);
             }
         }
         ROS_INFO("End 6 ...");
@@ -249,6 +342,38 @@ public:
                 if( dist2 < min_dist2){
                     min_dist2 = dist2;
                     min_ind = i;
+                }
+            }
+            return min_ind*space;
+    }
+
+    double findTheta(double x, double y, double theta_guess,double theta_last,  bool global_search= false){
+            int min_ind = 0;
+            double min_dist2 = 10000000.0;
+            double dist2 = 0.0;
+            int now_ind = int(theta_last / space);
+            if (now_ind + 500 < centerline_points.size()){
+                for (int i = now_ind; i < now_ind + 500; i ++){
+                    dist2 = pow(x-centerline_points.at(i).x, 2) + pow(y-centerline_points.at(i).y, 2);
+                    if( dist2 < min_dist2){
+                        min_dist2 = dist2;
+                        min_ind = i;
+                    }
+                }
+            }else{
+                for (int i = now_ind; i < centerline_points.size(); i ++){
+                    dist2 = pow(x-centerline_points.at(i).x, 2) + pow(y-centerline_points.at(i).y, 2);
+                    if( dist2 < min_dist2){
+                        min_dist2 = dist2;
+                        min_ind = i;
+                    }
+                }
+                for (int i = 0; i < int((theta_last + 10 - length) / space) + 5; i++ ){
+                    dist2 = pow(x-centerline_points.at(i).x, 2) + pow(y-centerline_points.at(i).y, 2);
+                    if( dist2 < min_dist2){
+                        min_dist2 = dist2;
+                        min_ind = i;
+                    }
                 }
             }
             return min_ind*space;

@@ -422,59 +422,59 @@ LMPC/fast:
 	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/build
 .PHONY : LMPC/fast
 
-src/LMPC.o: src/LMPC.cpp.o
+src/LMPC_dspace.o: src/LMPC_dspace.cpp.o
 
-.PHONY : src/LMPC.o
-
-# target to build an object file
-src/LMPC.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.o
-.PHONY : src/LMPC.cpp.o
-
-src/LMPC.i: src/LMPC.cpp.i
-
-.PHONY : src/LMPC.i
-
-# target to preprocess a source file
-src/LMPC.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.i
-.PHONY : src/LMPC.cpp.i
-
-src/LMPC.s: src/LMPC.cpp.s
-
-.PHONY : src/LMPC.s
-
-# target to generate assembly for a file
-src/LMPC.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.s
-.PHONY : src/LMPC.cpp.s
-
-src/record_initial_safe_set.o: src/record_initial_safe_set.cpp.o
-
-.PHONY : src/record_initial_safe_set.o
+.PHONY : src/LMPC_dspace.o
 
 # target to build an object file
-src/record_initial_safe_set.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.o
-.PHONY : src/record_initial_safe_set.cpp.o
+src/LMPC_dspace.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.o
+.PHONY : src/LMPC_dspace.cpp.o
 
-src/record_initial_safe_set.i: src/record_initial_safe_set.cpp.i
+src/LMPC_dspace.i: src/LMPC_dspace.cpp.i
 
-.PHONY : src/record_initial_safe_set.i
+.PHONY : src/LMPC_dspace.i
 
 # target to preprocess a source file
-src/record_initial_safe_set.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.i
-.PHONY : src/record_initial_safe_set.cpp.i
+src/LMPC_dspace.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.i
+.PHONY : src/LMPC_dspace.cpp.i
 
-src/record_initial_safe_set.s: src/record_initial_safe_set.cpp.s
+src/LMPC_dspace.s: src/LMPC_dspace.cpp.s
 
-.PHONY : src/record_initial_safe_set.s
+.PHONY : src/LMPC_dspace.s
 
 # target to generate assembly for a file
-src/record_initial_safe_set.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set.cpp.s
-.PHONY : src/record_initial_safe_set.cpp.s
+src/LMPC_dspace.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.s
+.PHONY : src/LMPC_dspace.cpp.s
+
+src/record_initial_safe_set_dspace.o: src/record_initial_safe_set_dspace.cpp.o
+
+.PHONY : src/record_initial_safe_set_dspace.o
+
+# target to build an object file
+src/record_initial_safe_set_dspace.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.o
+.PHONY : src/record_initial_safe_set_dspace.cpp.o
+
+src/record_initial_safe_set_dspace.i: src/record_initial_safe_set_dspace.cpp.i
+
+.PHONY : src/record_initial_safe_set_dspace.i
+
+# target to preprocess a source file
+src/record_initial_safe_set_dspace.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.i
+.PHONY : src/record_initial_safe_set_dspace.cpp.i
+
+src/record_initial_safe_set_dspace.s: src/record_initial_safe_set_dspace.cpp.s
+
+.PHONY : src/record_initial_safe_set_dspace.s
+
+# target to generate assembly for a file
+src/record_initial_safe_set_dspace.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/src/record_initial_safe_set_dspace.cpp.s
+.PHONY : src/record_initial_safe_set_dspace.cpp.s
 
 # Help Target
 help:
@@ -506,12 +506,12 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... LMPC"
-	@echo "... src/LMPC.o"
-	@echo "... src/LMPC.i"
-	@echo "... src/LMPC.s"
-	@echo "... src/record_initial_safe_set.o"
-	@echo "... src/record_initial_safe_set.i"
-	@echo "... src/record_initial_safe_set.s"
+	@echo "... src/LMPC_dspace.o"
+	@echo "... src/LMPC_dspace.i"
+	@echo "... src/LMPC_dspace.s"
+	@echo "... src/record_initial_safe_set_dspace.o"
+	@echo "... src/record_initial_safe_set_dspace.i"
+	@echo "... src/record_initial_safe_set_dspace.s"
 .PHONY : help
 
 

@@ -810,6 +810,7 @@ void LMPC::solve_MPC(const Matrix<double,nx,1>& terminal_candidate){
         geometry_msgs::Point r_p1, r_p2, l_p1, l_p2;
 
         center_p << track_->x_eval(s_ref), track_->y_eval(s_ref);
+        std::cout << "WIDTH = " << track_->getRightHalfWidth(s_ref) << std::endl;
         right_tangent_p = center_p + track_->getRightHalfWidth(s_ref) * Vector2d(dy_dtheta, -dx_dtheta).normalized();
         left_tangent_p  = center_p + track_->getLeftHalfWidth(s_ref) * Vector2d(-dy_dtheta, dx_dtheta).normalized();
 

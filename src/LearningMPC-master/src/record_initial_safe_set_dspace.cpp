@@ -86,7 +86,7 @@ void Record_SS::cmd_callback(const ackermann_msgs::AckermannDriveStampedConstPtr
     if (cmd_msg != nullptr){
         cout<<"recording: "<<time_<<endl;
         double speed_cmd = cmd_msg->drive.speed;
-        double steer_cmd = cmd_msg->drive.steering_angle;
+        double steer_cmd = cmd_msg->drive.steering_angle * M_PI / 180.0;
 
         double yaw = tf::getYaw(odom_.pose.pose.orientation);
         float x = odom_.pose.pose.position.x;

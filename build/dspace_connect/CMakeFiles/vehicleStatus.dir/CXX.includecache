@@ -43,6 +43,8 @@ ros/ros.h
 -
 tf/transform_listener.h
 -
+sensor_msgs/Imu.h
+-
 
 /opt/ros/melodic/include/ackermann_msgs/AckermannDrive.h
 string
@@ -1076,6 +1078,30 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/opt/ros/melodic/include/sensor_msgs/Imu.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Quaternion.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Vector3.h
 -
 
 /opt/ros/melodic/include/sensor_msgs/Joy.h

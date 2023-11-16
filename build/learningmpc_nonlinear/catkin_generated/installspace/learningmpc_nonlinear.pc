@@ -1,0 +1,8 @@
+prefix=/home/sun234/racing_work/install
+
+Name: learningmpc_nonlinear
+Description: Description of learningmpc_nonlinear
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -llearningmpc_nonlinear
+Requires: roscpp rospy std_msgs

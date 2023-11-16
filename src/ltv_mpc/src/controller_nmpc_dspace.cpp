@@ -29,7 +29,7 @@
 #include <tuple>
 using namespace std;
 
-double v_target = 15.0;  //目标车速
+double v_target = 10.0;  //目标车速
 double gCurvatureK = 150;
 int marker_spin = 0;
 double cutoff_freq = 100;
@@ -47,8 +47,8 @@ struct vehicleState{
 vehicleState gState;
 PathPlanner::Planner gPlanner;
 NMPC::IterativeController gController;  //内含两个全局函数
-double kp = 30.0;
-double ki = 30.0;
+double kp = 5.0;
+double ki = 0.0;
 double kd = 0.0;
 pid_speed pid_controller(kp, ki, kd);
 
@@ -200,7 +200,7 @@ int main(int argc, char **argv)
 
   //加载点集路径
   ros::NodeHandle nh_priv("~");
-  std::string track_filename = nh_priv.param<std::string>("track_filename", "/home/sun234/racing_work/src/LearningMPC-master/data/centerline_waypoints_handling_course.csv");
+  std::string track_filename = nh_priv.param<std::string>("track_filename", "/home/sun234/racing_work/src/learningmpc_nonlinear/data/30m_circle_right.csv");
   gPlanner.cvx.push_back(v_target);
   // cout << "here3"<< endl;
   gPlanner.loadPath(track_filename,1);   //txt文件中的点存储在gPlanner.waypoints_里
@@ -341,9 +341,9 @@ int main(int argc, char **argv)
     double control_a;
     control_a = pid_controller.pid_control(speed_error);
     double control_a_constraint;
-    control_a_constraint = max(min(7.0, control_a), -7.0);
+    control_a_constraint = max(min(6.0, control_a), -6.0);
     double control_T;
-    // control_T = control_a_constraint * gController.model_.m / 2.0;
+    control_T = max(min(control_a_constraint * gController.model_.m / 2.0, 2500.0), -2500.0);
     //cout <<" speed_error = " << speed_error << " control_a = "<< control_a <<" control_T = " << control_T <<endl;
     // cout << "here8"<< endl;
     gController.update(state,track,3,0.01,gPlanner.curvature_cur,&control_output,&prediction_output);
@@ -368,8 +368,8 @@ int main(int argc, char **argv)
     // cmd_vel.twist.linear.x = control_T;
     // cmd_vel.twist.angular.x = control_output.steer * 180.0 /M_PI;
     ackermann_msgs::AckermannDriveStamped cmd_vel;
-    cmd_vel.drive.acceleration = control_a_constraint;
-    cmd_vel.drive.speed = state.v_x + control_a_constraint * 0.05;
+    cmd_vel.drive.acceleration = control_T / 2.0;
+    cmd_vel.drive.speed = control_T / 2.0;
     cmd_vel.drive.steering_angle = control_output.steer * 180.0 / M_PI;
     cmd_vel_pub.publish(cmd_vel);  //发送控制量
     double clock_end_time = clock();

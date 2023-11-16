@@ -15,6 +15,7 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <nav_msgs/Odometry.h>
+#include <sensor_msgs/Imu.h>
 #include <fstream>
 #include <sstream>
 #include <chrono>
@@ -34,6 +35,15 @@ struct Vehicle_state{
 struct Steer{
     double steer_l;
     double steer_r;
+    double steer;
+};
+struct Torque{
+    double Tf;
+    double Tr;
+};
+struct Accel{
+    double ax;
+    double ay;
 };
 
 /*
@@ -48,9 +58,12 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "canread");
     ros::NodeHandle nh;
     ros::Publisher can_pub = nh.advertise<nav_msgs::Odometry>("odom", 10);
+    ros::Publisher can_state_pub = nh.advertise< sensor_msgs::Imu>("state_odom", 10);
     Position p_now;
     Vehicle_state state_now;
     Steer steer_now;
+    Accel accel_now;
+    Torque torque_now;
     int s, nbytes;
     struct sockaddr_can addr;
     struct ifreq ifr;
@@ -81,6 +94,7 @@ int main(int argc, char **argv) {
         nbytes = read(s, &frame, sizeof(struct can_frame)); //读取报文
         if (nbytes > 0) {
             nav_msgs::Odometry can_status;
+            sensor_msgs::Imu can_state_status;
             if (frame.can_id == 0x245) {
                 p_now.x0 = (frame.data[0] + frame.data[1] * 16 * 16) * 0.02 - 655;
                 p_now.y0 = (frame.data[2] + frame.data[3] * 16 * 16) * 0.02 - 655;
@@ -95,13 +109,6 @@ int main(int argc, char **argv) {
                 now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
                 time_value = now_ms.time_since_epoch().count();
                 printf("Now is 0x345! vx = %lf, time = %d\n", state_now.vx, time_value);
-                can_status.pose.pose.position.x = p_now.x0;
-                can_status.pose.pose.position.y = p_now.y0;
-                can_status.pose.pose.orientation = tf::createQuaternionMsgFromYaw(p_now.yaw);
-                can_status.twist.twist.linear.x = state_now.vx;
-                can_status.twist.twist.linear.y = state_now.vy;
-                can_status.twist.twist.angular.z = state_now.yaw_rate;
-                can_pub.publish(can_status);
             }else if (frame.can_id == 0x145) {
                 state_now.yaw_rate = (frame.data[0] + frame.data[1] * 16 * 16) * 0.0002 - 6.28;
                 state_now.vy = (frame.data[2] + frame.data[3] * 16 * 16) * 0.0003 - 9.8;
@@ -113,10 +120,33 @@ int main(int argc, char **argv) {
             }else if (frame.can_id == 0x2FF) {
                 steer_now.steer_l = (frame.data[0] + frame.data[1] * 16 * 16) * 0.001526 - 50.0;
                 steer_now.steer_r = (frame.data[2] + frame.data[3] * 16 * 16) * 0.001526 - 50.0;
+                steer_now.steer = (steer_now.steer_l + steer_now.steer_r) / 2.0;
                 now_time = std::chrono::system_clock::now( );
                 now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
                 time_value = now_ms.time_since_epoch().count();
                 printf("Now is 0x2FF! steer_l = %lf, steer_r = %lf, time = %d\n", steer_now.steer_l, steer_now.steer_r, time_value);
+            }else if (frame.can_id == 0x3FF) {
+                torque_now.Tf = (frame.data[0] + frame.data[1] * 16 * 16) * 0.08 - 2500.0;
+                torque_now.Tr = (frame.data[2] + frame.data[3] * 16 * 16) * 0.08 - 2500.0;
+                accel_now.ax = (frame.data[4] + frame.data[5] * 16 * 16) * 0.00025 - 8.0;
+                accel_now.ay = (frame.data[6] + frame.data[7] * 16 * 16) * 0.0005 - 16.0;
+                now_time = std::chrono::system_clock::now( );
+                now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
+                time_value = now_ms.time_since_epoch().count();
+                printf("Now is 0x3FF! Tf = %lf, Tr = %lf, ax = %lf, ay = %lf, time = %d\n", torque_now.Tf, torque_now.Tr, accel_now.ax, accel_now.ay, time_value);
+                can_status.pose.pose.position.x = p_now.x0;
+                can_status.pose.pose.position.y = p_now.y0;
+                can_status.pose.pose.orientation = tf::createQuaternionMsgFromYaw(p_now.yaw);
+                can_status.twist.twist.linear.x = state_now.vx;
+                can_status.twist.twist.linear.y = state_now.vy;
+                can_status.twist.twist.angular.z = state_now.yaw_rate;
+                can_state_status.angular_velocity.x = torque_now.Tf;
+                can_state_status.angular_velocity.y = torque_now.Tr;
+                can_state_status.angular_velocity.z = steer_now.steer;
+                can_state_status.linear_acceleration.x = accel_now.ax;
+                can_state_status.linear_acceleration.y = accel_now.ay;
+                can_pub.publish(can_status);
+                can_state_pub.publish(can_state_status);
             } else {
                 printf("unknown can_id");
             }

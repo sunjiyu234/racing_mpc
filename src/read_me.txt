@@ -1,0 +1,8 @@
+本代码为基于数据驱动的赛车跑圈代码；
+dspace_connect为与硬件在环dSPACE通信的接口；
+racecar_simulator为离线测试环境，目前只适配learningMpc-master中lmpc.launch
+offline_bayesian_optimization为离线贝叶斯优化（待加入TODO）
+ltv_mpc为横纵向解耦的循迹算法，用于跟踪道路中心线
+LearningMPC-master为横纵向耦合的以加速度，前轮转角为控制量的数据驱动赛车跑圈代码，其中模型为定常刚度模型+雅可比线性化
+learningmpc_nonlinear为横纵向耦合的以前后轮驱动扭矩，前轮转角为控制量的数据驱动赛车跑圈代码，其中模型为非线性模型+雅可比线性化，问题在于线性化后模型不准确，两帧预测时域间状态相差大，参考点不准确
+nonlinear_mpc_qp为横纵向耦合的以前后轮驱动扭矩，前轮转角为控制量的数据驱动赛车跑圈代码，上文件夹使用OSQP求解器，本文件夹使用qpoases（未调通TODO）

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load all parameters -->
+  <rosparam command="load" file="$(find nonlinear_mpc_qp)/Lmpc_params_dspace_nodert.yaml"/>
+  <param name="waypoint_file" value ="$(find nonlinear_mpc_qp)/data/centerline_waypoints_handling_course.csv"/>
+  <!-- Launch the learning MPC -->
+  <node pkg="nonlinear_mpc_qp" name="record_init_ss_nonlinear_qp" type="record_init_ss_nonlinear_qp" output="screen">
+  </node>
+
+</launch>

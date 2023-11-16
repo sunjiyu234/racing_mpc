@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load all parameters -->
+  <rosparam command="load" file="$(find learningmpc_nonlinear)/Lmpc_params_dspace.yaml"/>
+  <param name="waypoint_file" value ="$(find learningmpc_nonlinear)/data/centerline_waypoints_handling_course.csv"/>
+  <param name="init_data_file" value ="$(find learningmpc_nonlinear)/data/initial_safe_set_dspace_new_10ms_add_final.csv"/>
+  <!-- Launch the learning MPC -->
+  <node pkg="learningmpc_nonlinear" name="LMPC_nonlinear" type="LMPC_nonlinear" output="screen">
+  </node>
+
+</launch>

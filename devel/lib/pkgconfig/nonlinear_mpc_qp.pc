@@ -1,0 +1,8 @@
+prefix=/home/sun234/racing_work/devel
+
+Name: nonlinear_mpc_qp
+Description: Description of nonlinear_mpc_qp
+Version: 0.0.0
+Cflags: -I/home/sun234/racing_work/src/nonlinear_mpc_qp/include
+Libs: -L${prefix}/lib -lnonlinear_mpc_qp
+Requires: roscpp rospy std_msgs

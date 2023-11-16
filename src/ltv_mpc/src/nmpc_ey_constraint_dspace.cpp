@@ -450,6 +450,7 @@ void NMPC::Controller::update(const State &state, const State &linearize_point, 
         qp_.P_.addElement(state_var_idx(t, 2), state_var_idx(t, 2), weights_.w_e_yaw);
         //qp_.q_[state_var_idx(t, 2)] = -weights_.w_e_yaw * e_yaw_stable;
         qp_.P_.addElement(state_var_idx(t, 3), state_var_idx(t, 3), weights_.w_e_d);
+        // qp_.q_[state_var_idx(t, 3)] = -weights_.w_e_d * (-400.0);
         //if (t <= parameters_.control_horizon){
           //qp_.q_[control_var_idx(t-1, 0)] = -weights_.w_steer_angle * steer_stable;
         //}

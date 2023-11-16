@@ -151,6 +151,7 @@ dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o:
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/sensor_msgs/ChannelFloat32.h
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/sensor_msgs/Imu.h
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/sensor_msgs/Joy.h
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/sensor_msgs/PointCloud.h
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /opt/ros/melodic/include/std_msgs/Empty.h

@@ -10,7 +10,7 @@ pid_speed::pid_speed(double kp, double ki, double kd)
 }
 double pid_speed::pid_control(double error){
     double control_T;
-    control_T = pid_kp * error + pid_ki * sum_error *0.02 + pid_kd * (error - pre_error)/0.02;
+    control_T = pid_kp * error + pid_ki * sum_error *0.05 + pid_kd * (error - pre_error)/0.05;
     pre_error = error;
     sum_error += error;
     if(sum_error < -1.0){

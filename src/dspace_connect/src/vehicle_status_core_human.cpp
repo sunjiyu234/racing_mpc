@@ -5,6 +5,7 @@
 #include <nav_msgs/Odometry.h>
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
+#include <sensor_msgs/Imu.h>
 
 struct Position {
     double x0;
@@ -20,6 +21,15 @@ struct Vehicle_state{
 struct Steer{
     double steer_l;
     double steer_r;
+    double steer;
+};
+struct Torque{
+    double Tf;
+    double Tr;
+};
+struct Accel{
+    double ax;
+    double ay;
 };
 
 namespace VehicleStatusNS
@@ -29,6 +39,7 @@ namespace VehicleStatusNS
   {
      pub_odom = nh.advertise<nav_msgs::Odometry>("odom", 10);
      sub_desired_status = nh.subscribe("nav", 1, &VehicleStatus::CallbackGetDesiredStatus, this);
+     can_state_pub = nh.advertise< sensor_msgs::Imu>("state_odom", 10);
 
     ros::NodeHandle pnh("~");
     pnh.param<int>("device_type", device_type, 4);  //设备类型
@@ -49,14 +60,19 @@ namespace VehicleStatusNS
     Position p_now;
     Vehicle_state state_now;
     Steer steer_now;
+    Accel accel_now;
+    Torque torque_now;
     std::ofstream ofs;
     auto now_time = std::chrono::system_clock::now( );
     auto now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
     auto time_value = now_ms.time_since_epoch().count();
     ros::Time timestamp = ros::Time::now();
     nav_msgs::Odometry can_status;
+    sensor_msgs::Imu can_state_status;
     for (int i = 0; i < length; i++)
     {
+      ROS_INFO("current i = %d", i);
+      ROS_INFO("current ID = %d", date[i].ID);
       switch (date[i].ID)
       {
       case 0x245: //速度角度信号接收
@@ -74,6 +90,35 @@ namespace VehicleStatusNS
         now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
         time_value = now_ms.time_since_epoch().count();
         ROS_INFO("Now is 0x345! vx = %lf, time = %d\n", state_now.vx, time_value);
+        break;
+      case 0x145:
+        state_now.yaw_rate = (date[i].Data[0] + date[i].Data[1] * 16 * 16) * 0.0002 - 6.28;
+        state_now.vy = (date[i].Data[2] + date[i].Data[3] * 16 * 16) * 0.0003 - 9.8;
+        state_now.beta = (date[i].Data[4] + date[i].Data[5] * 16 * 16) * 0.0001 - 3.2767;
+        now_time = std::chrono::system_clock::now( );
+        now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
+        time_value = now_ms.time_since_epoch().count();
+        ROS_INFO("Now is 0x145! yaw_rate = %lf, vy = %lf, beta = %lf,  time = %d\n", state_now.yaw_rate, state_now.vy, state_now.beta,  time_value);
+        break;
+      case 0x2FF:
+        steer_now.steer_l = (date[i].Data[0] + date[i].Data[1] * 16 * 16) * 0.001526 - 50.0;
+        steer_now.steer_r = (date[i].Data[2] + date[i].Data[3] * 16 * 16) * 0.001526 - 50.0;
+        steer_now.steer = (steer_now.steer_l + steer_now.steer_r) * M_PI / 180.0/ 2.0;
+        now_time = std::chrono::system_clock::now( );
+        now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
+        time_value = now_ms.time_since_epoch().count();
+        ROS_INFO("Now is 0x2FF! steer_l = %lf, steer_r = %lf, time = %d\n", steer_now.steer_l, steer_now.steer_r, time_value);
+        break;
+      case 0x3FF:
+        torque_now.Tf = (date[i].Data[0] + date[i].Data[1] * 16 * 16) * 0.08 - 2500.0;
+        torque_now.Tr = (date[i].Data[2] + date[i].Data[3] * 16 * 16) * 0.08 - 2500.0;
+        accel_now.ax = (date[i].Data[4] + date[i].Data[5] * 16 * 16) * 0.00025 - 8.0;
+        accel_now.ay = (date[i].Data[6] + date[i].Data[7] * 16 * 16) * 0.0005 - 16.0;
+        now_time = std::chrono::system_clock::now( );
+        now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
+        time_value = now_ms.time_since_epoch().count();
+        ROS_INFO("Now is 0x3FF! Tf = %lf, Tr = %lf, ax = %lf, ay = %lf, time = %d\n", torque_now.Tf, torque_now.Tr, accel_now.ax, accel_now.ay, time_value);
+        // ROS_INFO("state! yaw_rate = %lf, vy = %lf, beta = %lf,  time = %d\n", state_now.yaw_rate, state_now.vy, state_now.beta,  time_value);
         timestamp = ros::Time::now();
         can_status.header.stamp = timestamp;
         can_status.header.frame_id = "map";
@@ -84,23 +129,14 @@ namespace VehicleStatusNS
         can_status.twist.twist.linear.x = state_now.vx;
         can_status.twist.twist.linear.y = state_now.vy;
         can_status.twist.twist.angular.z = state_now.yaw_rate;
+        can_state_status.angular_velocity.x = torque_now.Tf;
+        can_state_status.angular_velocity.y = torque_now.Tr;
+        can_state_status.angular_velocity.z = steer_now.steer;
+        can_state_status.linear_acceleration.x = accel_now.ax;
+        can_state_status.linear_acceleration.y = accel_now.ay;
         pub_odom.publish(can_status);
+        can_state_pub.publish(can_state_status);
         break;
-      case 0x145:
-        state_now.yaw_rate = (date[i].Data[0] + date[i].Data[1] * 16 * 16) * 0.0002 - 6.28;
-        state_now.vy = (date[i].Data[2] + date[i].Data[3] * 16 * 16) * 0.0003 - 9.8;
-        state_now.beta = (date[i].Data[4] + date[i].Data[5] * 16 * 16) * 0.0001 - 3.2767;
-        now_time = std::chrono::system_clock::now( );
-        now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
-        time_value = now_ms.time_since_epoch().count();
-        ROS_INFO("Now is 0x145! yaw_rate = %lf, vy = %lf, beta = %lf,  time = %d\n", state_now.yaw_rate, state_now.vy, state_now.beta,  time_value);
-      case 0x2FF:
-        steer_now.steer_l = (date[i].Data[0] + date[i].Data[1] * 16 * 16) * 0.001526 - 50.0;
-        steer_now.steer_r = (date[i].Data[2] + date[i].Data[3] * 16 * 16) * 0.001526 - 50.0;
-        now_time = std::chrono::system_clock::now( );
-        now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time);
-        time_value = now_ms.time_since_epoch().count();
-        ROS_INFO("Now is 0x2FF! steer_l = %lf, steer_r = %lf, time = %d\n", steer_now.steer_l, steer_now.steer_r, time_value);
       default:
         ROS_INFO("unkonown can id");
         std::cout << "id = "<< date[i].ID<< std::endl;
@@ -270,10 +306,10 @@ namespace VehicleStatusNS
     date[1].Data[1] = (int)((accel + 8) / 0.00025) / (16 * 16);
     date[1].Data[2] = (int)((speed * 3.6 + 20) / 0.0025) % (16 * 16);
     date[1].Data[3] = (int)((speed * 3.6 + 20) / 0.0025) / (16 * 16);
-    date[1].Data[4] = 0x00;
-    date[1].Data[5] = 0x00;
-    date[1].Data[6] = 0x00;
-    date[1].Data[7] = 0x00;
+    date[1].Data[4] = (int)((accel + 2500) / 0.08) % (16 * 16);
+    date[1].Data[5] = (int)((accel + 2500) / 0.08) / (16 * 16);
+    date[1].Data[6] = (int)((speed + 2500) / 0.08) % (16 * 16);
+    date[1].Data[7] = (int)((speed + 2500) / 0.08) / (16 * 16);
     auto now_time_2 = std::chrono::system_clock::now( );
     auto now_ms_2 = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time_1);
     auto time_value_2 = now_ms_2.time_since_epoch().count();
@@ -309,10 +345,10 @@ namespace VehicleStatusNS
     date[1].Data[1] = (int)((0 + 8) / 0.00025) / (16 * 16);
     date[1].Data[2] = (int)((0 + 20) / 0.0025) % (16 * 16);
     date[1].Data[3] = (int)((0 + 20) / 0.0025) / (16 * 16);
-    date[1].Data[4] = 0x00;
-    date[1].Data[5] = 0x00;
-    date[1].Data[6] = 0x00;
-    date[1].Data[7] = 0x00;
+    date[1].Data[4] = (int)((0+ 2500) / 0.08) % (16 * 16);
+    date[1].Data[5] = (int)((0 + 2500) / 0.08) / (16 * 16);
+    date[1].Data[6] = (int)((0 + 2500) / 0.08) % (16 * 16);
+    date[1].Data[7] = (int)((0 + 2500) / 0.08) / (16 * 16);
     SendDate(date, length);
   }
 
@@ -335,6 +371,7 @@ namespace VehicleStatusNS
       DWORD length = ReceiveDate(date, 2500);
       if (length > 0)
       {
+        // ROS_INFO("LENGTH = %d\n", length );
         DateProcessAndSend(date, length);
       }
       rate_loop.sleep();

@@ -264,7 +264,7 @@ gtest/googlemock/preinstall: gtest/googlemock/gtest/preinstall
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=17,18,19,20 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=21,22,23,24 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -296,7 +296,7 @@ clean: gtest/googlemock/CMakeFiles/gmock_main.dir/clean
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=14,15,16 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=18,19,20 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,7 +347,7 @@ gtest/googlemock/gtest/preinstall:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=23,24 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=27,28 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +379,7 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=21,22 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=25,26 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -460,7 +460,7 @@ LearningMPC-master/CMakeFiles/record_init_ss.dir/all: LearningMPC-master/CMakeFi
 LearningMPC-master/CMakeFiles/record_init_ss.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/depend
 	$(MAKE) -f LearningMPC-master/CMakeFiles/record_init_ss.dir/build.make LearningMPC-master/CMakeFiles/record_init_ss.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=39,40 "Built target record_init_ss"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=43,44 "Built target record_init_ss"
 .PHONY : LearningMPC-master/CMakeFiles/record_init_ss.dir/all
 
 # Include target in all.
@@ -1096,7 +1096,7 @@ dspace_connect/preinstall:
 dspace_connect/CMakeFiles/canread.dir/all:
 	$(MAKE) -f dspace_connect/CMakeFiles/canread.dir/build.make dspace_connect/CMakeFiles/canread.dir/depend
 	$(MAKE) -f dspace_connect/CMakeFiles/canread.dir/build.make dspace_connect/CMakeFiles/canread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=5,6 "Built target canread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=9,10 "Built target canread"
 .PHONY : dspace_connect/CMakeFiles/canread.dir/all
 
 # Include target in all.
@@ -1133,7 +1133,7 @@ clean: dspace_connect/CMakeFiles/canread.dir/clean
 dspace_connect/CMakeFiles/vehicleStatus.dir/all:
 	$(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/depend
 	$(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=43,44,45 "Built target vehicleStatus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=51,52,53 "Built target vehicleStatus"
 .PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/all
 
 # Include target in all.
@@ -1266,7 +1266,7 @@ clean: dspace_connect/CMakeFiles/dspace_connect_geneus.dir/clean
 dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/build.make dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/depend
 	$(MAKE) -f dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/build.make dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=13 "Built target dspace_connect_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=17 "Built target dspace_connect_generate_messages_eus"
 .PHONY : dspace_connect/CMakeFiles/dspace_connect_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2677,6 +2677,128 @@ clean: dspace_connect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.di
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory learningmpc_nonlinear
+
+# Convenience name for "all" pass in the directory.
+learningmpc_nonlinear/all: learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all
+learningmpc_nonlinear/all: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all
+
+.PHONY : learningmpc_nonlinear/all
+
+# Convenience name for "clean" pass in the directory.
+learningmpc_nonlinear/clean: learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/clean
+learningmpc_nonlinear/clean: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/clean
+
+.PHONY : learningmpc_nonlinear/clean
+
+# Convenience name for "preinstall" pass in the directory.
+learningmpc_nonlinear/preinstall:
+
+.PHONY : learningmpc_nonlinear/preinstall
+
+#=============================================================================
+# Target rules for target learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir
+
+# All Build rule for target.
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_py.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/depend
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=45,46 "Built target record_init_ss_nonlinear"
+.PHONY : learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all
+
+# Include target in all.
+all: learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 0
+.PHONY : learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule
+
+# Convenience name for target.
+record_init_ss_nonlinear: learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule
+
+.PHONY : record_init_ss_nonlinear
+
+# clean rule for target.
+learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/clean:
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/clean
+.PHONY : learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/clean
+
+# clean rule for target.
+clean: learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir
+
+# All Build rule for target.
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_py.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/depend
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=3,4 "Built target LMPC_nonlinear"
+.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all
+
+# Include target in all.
+all: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 0
+.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/rule
+
+# Convenience name for target.
+LMPC_nonlinear: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/rule
+
+.PHONY : LMPC_nonlinear
+
+# clean rule for target.
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/clean:
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/clean
+.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/clean
+
+# clean rule for target.
+clean: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory ltv_mpc
 
 # Convenience name for "all" pass in the directory.
@@ -2946,7 +3068,7 @@ clean: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp.dir/clean
 ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/build.make ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/depend
 	$(MAKE) -f ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/build.make ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=27 "Built target ltv_mpc_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=31 "Built target ltv_mpc_generate_messages_eus"
 .PHONY : ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3074,7 +3196,7 @@ clean: ltv_mpc/CMakeFiles/ltv_mpc_genpy.dir/clean
 ltv_mpc/CMakeFiles/controller_nmpc.dir/all:
 	$(MAKE) -f ltv_mpc/CMakeFiles/controller_nmpc.dir/build.make ltv_mpc/CMakeFiles/controller_nmpc.dir/depend
 	$(MAKE) -f ltv_mpc/CMakeFiles/controller_nmpc.dir/build.make ltv_mpc/CMakeFiles/controller_nmpc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=7,8,9,10,11,12 "Built target controller_nmpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=11,12,13,14,15,16 "Built target controller_nmpc"
 .PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/all
 
 # Include target in all.
@@ -3101,6 +3223,128 @@ ltv_mpc/CMakeFiles/controller_nmpc.dir/clean:
 
 # clean rule for target.
 clean: ltv_mpc/CMakeFiles/controller_nmpc.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory nonlinear_mpc_qp
+
+# Convenience name for "all" pass in the directory.
+nonlinear_mpc_qp/all: nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all
+nonlinear_mpc_qp/all: nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all
+
+.PHONY : nonlinear_mpc_qp/all
+
+# Convenience name for "clean" pass in the directory.
+nonlinear_mpc_qp/clean: nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/clean
+nonlinear_mpc_qp/clean: nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/clean
+
+.PHONY : nonlinear_mpc_qp/clean
+
+# Convenience name for "preinstall" pass in the directory.
+nonlinear_mpc_qp/preinstall:
+
+.PHONY : nonlinear_mpc_qp/preinstall
+
+#=============================================================================
+# Target rules for target nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir
+
+# All Build rule for target.
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_py.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/depend
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=47,48 "Built target record_init_ss_nonlinear_qp"
+.PHONY : nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all
+
+# Include target in all.
+all: nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 0
+.PHONY : nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/rule
+
+# Convenience name for target.
+record_init_ss_nonlinear_qp: nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/rule
+
+.PHONY : record_init_ss_nonlinear_qp
+
+# clean rule for target.
+nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/clean:
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/clean
+.PHONY : nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/clean
+
+# clean rule for target.
+clean: nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir
+
+# All Build rule for target.
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_py.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all: LearningMPC-master/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/depend
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=5,6 "Built target LMPC_nonlinear_qp"
+.PHONY : nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all
+
+# Include target in all.
+all: nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sun234/racing_work/build/CMakeFiles 0
+.PHONY : nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/rule
+
+# Convenience name for target.
+LMPC_nonlinear_qp: nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/rule
+
+.PHONY : LMPC_nonlinear_qp
+
+# clean rule for target.
+nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/clean:
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/clean
+.PHONY : nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/clean
+
+# clean rule for target.
+clean: nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/clean
 
 .PHONY : clean
 
@@ -3199,7 +3443,7 @@ racecar_simulator/CMakeFiles/keyboard.dir/all: racecar_simulator/CMakeFiles/race
 racecar_simulator/CMakeFiles/keyboard.dir/all: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_cpp.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/keyboard.dir/build.make racecar_simulator/CMakeFiles/keyboard.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/keyboard.dir/build.make racecar_simulator/CMakeFiles/keyboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=25,26 "Built target keyboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=29,30 "Built target keyboard"
 .PHONY : racecar_simulator/CMakeFiles/keyboard.dir/all
 
 # Include target in all.
@@ -3238,7 +3482,7 @@ racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/all: ds
 racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/all: racecar_simulator/CMakeFiles/nav_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/build.make racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/build.make racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=36 "Built target racecar_simulator_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=40 "Built target racecar_simulator_generate_messages_eus"
 .PHONY : racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3539,7 +3783,7 @@ clean: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages.dir/clea
 racecar_simulator/CMakeFiles/racecar_simulator.dir/all:
 	$(MAKE) -f racecar_simulator/CMakeFiles/racecar_simulator.dir/build.make racecar_simulator/CMakeFiles/racecar_simulator.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/racecar_simulator.dir/build.make racecar_simulator/CMakeFiles/racecar_simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=30,31,32,33,34,35 "Built target racecar_simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=34,35,36,37,38,39 "Built target racecar_simulator"
 .PHONY : racecar_simulator/CMakeFiles/racecar_simulator.dir/all
 
 # Include target in all.
@@ -3803,7 +4047,7 @@ racecar_simulator/CMakeFiles/mux.dir/all: racecar_simulator/CMakeFiles/racecar_s
 racecar_simulator/CMakeFiles/mux.dir/all: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_cpp.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/mux.dir/build.make racecar_simulator/CMakeFiles/mux.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/mux.dir/build.make racecar_simulator/CMakeFiles/mux.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=28,29 "Built target mux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=32,33 "Built target mux"
 .PHONY : racecar_simulator/CMakeFiles/mux.dir/all
 
 # Include target in all.
@@ -3937,7 +4181,7 @@ racecar_simulator/CMakeFiles/behavior_controller.dir/all: racecar_simulator/CMak
 racecar_simulator/CMakeFiles/behavior_controller.dir/all: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_cpp.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/behavior_controller.dir/build.make racecar_simulator/CMakeFiles/behavior_controller.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/behavior_controller.dir/build.make racecar_simulator/CMakeFiles/behavior_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=3,4 "Built target behavior_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=7,8 "Built target behavior_controller"
 .PHONY : racecar_simulator/CMakeFiles/behavior_controller.dir/all
 
 # Include target in all.
@@ -4039,7 +4283,7 @@ racecar_simulator/CMakeFiles/random_walk.dir/all: racecar_simulator/CMakeFiles/r
 racecar_simulator/CMakeFiles/random_walk.dir/all: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_cpp.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/random_walk.dir/build.make racecar_simulator/CMakeFiles/random_walk.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/random_walk.dir/build.make racecar_simulator/CMakeFiles/random_walk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=37,38 "Built target random_walk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=41,42 "Built target random_walk"
 .PHONY : racecar_simulator/CMakeFiles/random_walk.dir/all
 
 # Include target in all.
@@ -4141,7 +4385,7 @@ racecar_simulator/CMakeFiles/simulator.dir/all: racecar_simulator/CMakeFiles/rac
 racecar_simulator/CMakeFiles/simulator.dir/all: racecar_simulator/CMakeFiles/racecar_simulator_generate_messages_cpp.dir/all
 	$(MAKE) -f racecar_simulator/CMakeFiles/simulator.dir/build.make racecar_simulator/CMakeFiles/simulator.dir/depend
 	$(MAKE) -f racecar_simulator/CMakeFiles/simulator.dir/build.make racecar_simulator/CMakeFiles/simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=41,42 "Built target simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=49,50 "Built target simulator"
 .PHONY : racecar_simulator/CMakeFiles/simulator.dir/all
 
 # Include target in all.

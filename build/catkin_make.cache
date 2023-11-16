@@ -1,2 +1,2 @@
-LearningMPC-master:dspace_connect:ltv_mpc:racecar_simulator
+LearningMPC-master:dspace_connect:learningmpc_nonlinear:ltv_mpc:nonlinear_mpc_qp:racecar_simulator
 -DCATKIN_DEVEL_PREFIX=/home/sun234/racing_work/devel -DCMAKE_INSTALL_PREFIX=/home/sun234/racing_work/install -G Unix Makefiles

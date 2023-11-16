@@ -27,6 +27,7 @@ public:
 
   ros::NodeHandle nh;
   ros::Publisher pub_odom;  //车辆速度
+  ros::Publisher can_state_pub;
   ros::Subscriber sub_desired_status;  //
 
   int device_type;//设备类型

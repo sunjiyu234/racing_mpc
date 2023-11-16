@@ -7,5 +7,7 @@
 subdirs("gtest")
 subdirs("LearningMPC-master")
 subdirs("dspace_connect")
+subdirs("learningmpc_nonlinear")
 subdirs("ltv_mpc")
+subdirs("nonlinear_mpc_qp")
 subdirs("racecar_simulator")

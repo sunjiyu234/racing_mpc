@@ -1143,6 +1143,32 @@ dynamic_reconfigure_generate_messages_nodejs/fast:
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named record_init_ss_nonlinear
+
+# Build rule for target.
+record_init_ss_nonlinear: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 record_init_ss_nonlinear
+.PHONY : record_init_ss_nonlinear
+
+# fast build rule for target.
+record_init_ss_nonlinear/fast:
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build
+.PHONY : record_init_ss_nonlinear/fast
+
+#=============================================================================
+# Target rules for targets named LMPC_nonlinear
+
+# Build rule for target.
+LMPC_nonlinear: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LMPC_nonlinear
+.PHONY : LMPC_nonlinear
+
+# fast build rule for target.
+LMPC_nonlinear/fast:
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build
+.PHONY : LMPC_nonlinear/fast
+
+#=============================================================================
 # Target rules for targets named ltv_mpc_generate_messages_lisp
 
 # Build rule for target.
@@ -1297,6 +1323,32 @@ controller_nmpc: cmake_check_build_system
 controller_nmpc/fast:
 	$(MAKE) -f ltv_mpc/CMakeFiles/controller_nmpc.dir/build.make ltv_mpc/CMakeFiles/controller_nmpc.dir/build
 .PHONY : controller_nmpc/fast
+
+#=============================================================================
+# Target rules for targets named record_init_ss_nonlinear_qp
+
+# Build rule for target.
+record_init_ss_nonlinear_qp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 record_init_ss_nonlinear_qp
+.PHONY : record_init_ss_nonlinear_qp
+
+# fast build rule for target.
+record_init_ss_nonlinear_qp/fast:
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/record_init_ss_nonlinear_qp.dir/build
+.PHONY : record_init_ss_nonlinear_qp/fast
+
+#=============================================================================
+# Target rules for targets named LMPC_nonlinear_qp
+
+# Build rule for target.
+LMPC_nonlinear_qp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LMPC_nonlinear_qp
+.PHONY : LMPC_nonlinear_qp
+
+# fast build rule for target.
+LMPC_nonlinear_qp/fast:
+	$(MAKE) -f nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build.make nonlinear_mpc_qp/CMakeFiles/LMPC_nonlinear_qp.dir/build
+.PHONY : LMPC_nonlinear_qp/fast
 
 #=============================================================================
 # Target rules for targets named visualization_msgs_generate_messages_py
@@ -1802,6 +1854,8 @@ help:
 	@echo "... dspace_connect_genpy"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... record_init_ss_nonlinear"
+	@echo "... LMPC_nonlinear"
 	@echo "... ltv_mpc_generate_messages_lisp"
 	@echo "... ltv_mpc_gennodejs"
 	@echo "... ltv_mpc_geneus"
@@ -1814,6 +1868,8 @@ help:
 	@echo "... ltv_mpc_generate_messages_py"
 	@echo "... ltv_mpc_genpy"
 	@echo "... controller_nmpc"
+	@echo "... record_init_ss_nonlinear_qp"
+	@echo "... LMPC_nonlinear_qp"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... keyboard"
 	@echo "... racecar_simulator_generate_messages_eus"

@@ -152,6 +152,7 @@ dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o
  /opt/ros/melodic/include/ros/wall_timer_options.h
  /opt/ros/melodic/include/rosconsole/macros_generated.h
  /opt/ros/melodic/include/sensor_msgs/ChannelFloat32.h
+ /opt/ros/melodic/include/sensor_msgs/Imu.h
  /opt/ros/melodic/include/sensor_msgs/Joy.h
  /opt/ros/melodic/include/sensor_msgs/PointCloud.h
  /opt/ros/melodic/include/std_msgs/Empty.h

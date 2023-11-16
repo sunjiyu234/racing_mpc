@@ -250,11 +250,12 @@ void PathPlanner::Planner::computeSplineWithPoints() {
                 kr_now = -kr_now;
             }
         }
-        if (abs(kr_now) > 0.1){
+        if (abs(kr_now) > 0.7){
           ccur.push_back(ccur[ccur.size() - 1]);
         }else{
           ccur.push_back(kr_now);
         }
+        // ccur.push_back(kr_now);
         //cout <<"kr = "<< kr_now << " cvx = " << min(90/3.6, pow((0.7 * 9.8 / kr_now),0.5))<<endl;
     }
     ccur.push_back(ccur[ccur.size() - 1]);
@@ -262,7 +263,7 @@ void PathPlanner::Planner::computeSplineWithPoints() {
     for(int i = 0; i < ccur.size(); i++){
         outfile << ccur[i] << endl;
         // outfile << min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)) << endl;
-        cvx.push_back(min(54.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
+        cvx.push_back(min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
     }
     outfile.close();
     outfile_xy.close();

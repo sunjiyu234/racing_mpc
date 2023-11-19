@@ -2,8 +2,8 @@
 <launch>
   <!-- Load all parameters -->
   <rosparam command="load" file="$(find LearningMPC)/Lmpc_params_dspace.yaml"/>
-  <param name="waypoint_file" value ="$(find LearningMPC)/data/centerline_waypoints_handling_course.csv"/>
-  <param name="init_data_file" value ="$(find LearningMPC)/data/initial_safe_set_dspace_10.csv"/>
+  <param name="waypoint_file" value ="$(find LearningMPC)/data/30m_circle_right.csv"/>
+  <param name="init_data_file" value ="$(find LearningMPC)/data/initial_safe_set_dspace_30circle_10ms_nodert.csv"/>
   <!-- Launch the learning MPC -->
   <node pkg="LearningMPC" name="LMPC" type="LMPC" output="screen">
   </node>

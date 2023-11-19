@@ -125,7 +125,7 @@ include_directories(
 
 )
 
-add_executable(LMPC src/LMPC_dspace.cpp)
+add_executable(LMPC src/LMPC.cpp)
 target_link_libraries(LMPC ${catkin_LIBRARIES})
 add_dependencies(LMPC ${catkin_EXPORTED_TARGETS})
 

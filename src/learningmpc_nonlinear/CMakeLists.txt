@@ -124,7 +124,7 @@ include_directories(
   ${EIGEN3_INCLUDE_DIRS}
 )
 
-add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert.cpp)
+add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa.cpp)
 target_link_libraries(LMPC_nonlinear ${catkin_LIBRARIES})
 add_dependencies(LMPC_nonlinear ${catkin_EXPORTED_TARGETS})
 

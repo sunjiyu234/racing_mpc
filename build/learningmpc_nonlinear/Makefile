@@ -197,32 +197,32 @@ LMPC_nonlinear/fast:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build
 .PHONY : LMPC_nonlinear/fast
 
-src/LMPC_dspace_nonlinear_nodert.o: src/LMPC_dspace_nonlinear_nodert.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa.o: src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.o
 
 # target to build an object file
-src/LMPC_dspace_nonlinear_nodert.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o
-.PHONY : src/LMPC_dspace_nonlinear_nodert.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
 
-src/LMPC_dspace_nonlinear_nodert.i: src/LMPC_dspace_nonlinear_nodert.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa.i: src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.i
 
 # target to preprocess a source file
-src/LMPC_dspace_nonlinear_nodert.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.i
-.PHONY : src/LMPC_dspace_nonlinear_nodert.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
 
-src/LMPC_dspace_nonlinear_nodert.s: src/LMPC_dspace_nonlinear_nodert.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa.s: src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.s
 
 # target to generate assembly for a file
-src/LMPC_dspace_nonlinear_nodert.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.s
-.PHONY : src/LMPC_dspace_nonlinear_nodert.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
 
 src/record_initial_safe_set_dspace_nonlinear_nodert.o: src/record_initial_safe_set_dspace_nonlinear_nodert.cpp.o
 
@@ -266,9 +266,9 @@ help:
 	@echo "... test"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... src/LMPC_dspace_nonlinear_nodert.o"
-	@echo "... src/LMPC_dspace_nonlinear_nodert.i"
-	@echo "... src/LMPC_dspace_nonlinear_nodert.s"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.o"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.i"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.s"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.o"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.i"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.s"

@@ -57,38 +57,38 @@ include learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/progress.make
 # Include the compile flags for this target's objects.
 include learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/flags.make
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/flags.make
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o: /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o"
-	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o -c /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert.cpp
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/flags.make
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o: /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert_noa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o"
+	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o -c /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert_noa.cpp
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.i"
-	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert.cpp > CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.i
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.i"
+	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert_noa.cpp > CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.s"
-	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert.cpp -o CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.s
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.s"
+	cd /home/sun234/racing_work/build/learningmpc_nonlinear && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/learningmpc_nonlinear/src/LMPC_dspace_nonlinear_nodert_noa.cpp -o CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.requires:
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.requires:
 
-.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.requires
+.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.requires
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.provides: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.requires
-	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.provides.build
-.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.provides
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.provides: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.requires
+	$(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.provides.build
+.PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.provides
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.provides.build: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.provides.build: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
 
 
 # Object files for target LMPC_nonlinear
 LMPC_nonlinear_OBJECTS = \
-"CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o"
+"CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o"
 
 # External object files for target LMPC_nonlinear
 LMPC_nonlinear_EXTERNAL_OBJECTS =
 
-/home/sun234/racing_work/devel/lib/learningmpc_nonlinear/LMPC_nonlinear: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o
+/home/sun234/racing_work/devel/lib/learningmpc_nonlinear/LMPC_nonlinear: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
 /home/sun234/racing_work/devel/lib/learningmpc_nonlinear/LMPC_nonlinear: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make
 /home/sun234/racing_work/devel/lib/learningmpc_nonlinear/LMPC_nonlinear: /opt/ros/melodic/lib/libroscpp.so
 /home/sun234/racing_work/devel/lib/learningmpc_nonlinear/LMPC_nonlinear: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -119,7 +119,7 @@ learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build: /home/sun234/racing_w
 
 .PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build
 
-learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/requires: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert.cpp.o.requires
+learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/requires: learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o.requires
 
 .PHONY : learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/requires
 

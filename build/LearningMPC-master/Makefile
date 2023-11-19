@@ -422,32 +422,32 @@ LMPC/fast:
 	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/build
 .PHONY : LMPC/fast
 
-src/LMPC_dspace.o: src/LMPC_dspace.cpp.o
+src/LMPC.o: src/LMPC.cpp.o
 
-.PHONY : src/LMPC_dspace.o
+.PHONY : src/LMPC.o
 
 # target to build an object file
-src/LMPC_dspace.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.o
-.PHONY : src/LMPC_dspace.cpp.o
+src/LMPC.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.o
+.PHONY : src/LMPC.cpp.o
 
-src/LMPC_dspace.i: src/LMPC_dspace.cpp.i
+src/LMPC.i: src/LMPC.cpp.i
 
-.PHONY : src/LMPC_dspace.i
+.PHONY : src/LMPC.i
 
 # target to preprocess a source file
-src/LMPC_dspace.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.i
-.PHONY : src/LMPC_dspace.cpp.i
+src/LMPC.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.i
+.PHONY : src/LMPC.cpp.i
 
-src/LMPC_dspace.s: src/LMPC_dspace.cpp.s
+src/LMPC.s: src/LMPC.cpp.s
 
-.PHONY : src/LMPC_dspace.s
+.PHONY : src/LMPC.s
 
 # target to generate assembly for a file
-src/LMPC_dspace.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC_dspace.cpp.s
-.PHONY : src/LMPC_dspace.cpp.s
+src/LMPC.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f LearningMPC-master/CMakeFiles/LMPC.dir/build.make LearningMPC-master/CMakeFiles/LMPC.dir/src/LMPC.cpp.s
+.PHONY : src/LMPC.cpp.s
 
 src/record_initial_safe_set_dspace.o: src/record_initial_safe_set_dspace.cpp.o
 
@@ -506,9 +506,9 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... LMPC"
-	@echo "... src/LMPC_dspace.o"
-	@echo "... src/LMPC_dspace.i"
-	@echo "... src/LMPC_dspace.s"
+	@echo "... src/LMPC.o"
+	@echo "... src/LMPC.i"
+	@echo "... src/LMPC.s"
 	@echo "... src/record_initial_safe_set_dspace.o"
 	@echo "... src/record_initial_safe_set_dspace.i"
 	@echo "... src/record_initial_safe_set_dspace.s"

@@ -30,7 +30,7 @@
 #include <LearningMPC/occupancy_grid.h>
 
 const int SEARCH_RANGE = 10;
-const double HALF_WIDTH_MAX = 5.0;
+const double HALF_WIDTH_MAX = 0.5;
 using namespace std;
 
 typedef struct Point_ref{

@@ -2,6 +2,8 @@ pose_topic : "odom"
 state_topic: "state_odom"
 drive_topic: "nav"
 wp_file_name: "/home/racing_work/src/learningmpc_nonlinear/data/centerline_waypoints.csv"  ## no use , use lmpc.launch
+cov_fun1: "CovSEiso"
+cov_fun2: "CovNoise"
 
 r_Tf : 0.001
 r_Tr: 0.001
@@ -46,3 +48,9 @@ R_wheel: 0.298
 mass: 1140 # kg (measured on car 'lidart')
 moment_inertia: 2849.5 # kg m^2 (estimated as a rectangle with width and height of car and evenly distributed mass, then shifted to account for center of mass location)
 random: 1.0
+
+ell: 0.0
+sf: 0.0
+sn: -10.0
+max_num: 300
+delay_ind: 3

@@ -197,32 +197,59 @@ LMPC_nonlinear/fast:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build
 .PHONY : LMPC_nonlinear/fast
 
-src/LMPC_dspace_nonlinear_nodert_noa.o: src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.o: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.o
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.o
 
 # target to build an object file
-src/LMPC_dspace_nonlinear_nodert_noa.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.o
 
-src/LMPC_dspace_nonlinear_nodert_noa.i: src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.i: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.i
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.i
 
 # target to preprocess a source file
-src/LMPC_dspace_nonlinear_nodert_noa.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.i
 
-src/LMPC_dspace_nonlinear_nodert_noa.s: src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.s: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.s
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.s
 
 # target to generate assembly for a file
-src/LMPC_dspace_nonlinear_nodert_noa.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp.s
+
+src/gp_learn.o: src/gp_learn.cpp.o
+
+.PHONY : src/gp_learn.o
+
+# target to build an object file
+src/gp_learn.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.o
+.PHONY : src/gp_learn.cpp.o
+
+src/gp_learn.i: src/gp_learn.cpp.i
+
+.PHONY : src/gp_learn.i
+
+# target to preprocess a source file
+src/gp_learn.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.i
+.PHONY : src/gp_learn.cpp.i
+
+src/gp_learn.s: src/gp_learn.cpp.s
+
+.PHONY : src/gp_learn.s
+
+# target to generate assembly for a file
+src/gp_learn.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.s
+.PHONY : src/gp_learn.cpp.s
 
 src/record_initial_safe_set_dspace_nonlinear_nodert.o: src/record_initial_safe_set_dspace_nonlinear_nodert.cpp.o
 
@@ -266,9 +293,12 @@ help:
 	@echo "... test"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.o"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.i"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa.s"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.o"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.i"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.s"
+	@echo "... src/gp_learn.o"
+	@echo "... src/gp_learn.i"
+	@echo "... src/gp_learn.s"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.o"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.i"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.s"

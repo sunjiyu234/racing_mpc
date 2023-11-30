@@ -1351,6 +1351,175 @@ LMPC_nonlinear_qp/fast:
 .PHONY : LMPC_nonlinear_qp/fast
 
 #=============================================================================
+# Target rules for targets named pred_msg_generate_messages_cpp
+
+# Build rule for target.
+pred_msg_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages_cpp
+.PHONY : pred_msg_generate_messages_cpp
+
+# fast build rule for target.
+pred_msg_generate_messages_cpp/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages_cpp.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages_cpp.dir/build
+.PHONY : pred_msg_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_generate_messages_eus
+
+# Build rule for target.
+pred_msg_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages_eus
+.PHONY : pred_msg_generate_messages_eus
+
+# fast build rule for target.
+pred_msg_generate_messages_eus/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages_eus.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages_eus.dir/build
+.PHONY : pred_msg_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_generate_messages_py
+
+# Build rule for target.
+pred_msg_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages_py
+.PHONY : pred_msg_generate_messages_py
+
+# fast build rule for target.
+pred_msg_generate_messages_py/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages_py.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages_py.dir/build
+.PHONY : pred_msg_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _pred_msg_generate_messages_check_deps_correct_data
+
+# Build rule for target.
+_pred_msg_generate_messages_check_deps_correct_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pred_msg_generate_messages_check_deps_correct_data
+.PHONY : _pred_msg_generate_messages_check_deps_correct_data
+
+# fast build rule for target.
+_pred_msg_generate_messages_check_deps_correct_data/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/_pred_msg_generate_messages_check_deps_correct_data.dir/build.make pred_msg/CMakeFiles/_pred_msg_generate_messages_check_deps_correct_data.dir/build
+.PHONY : _pred_msg_generate_messages_check_deps_correct_data/fast
+
+#=============================================================================
+# Target rules for targets named _pred_msg_generate_messages_check_deps_state_data
+
+# Build rule for target.
+_pred_msg_generate_messages_check_deps_state_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pred_msg_generate_messages_check_deps_state_data
+.PHONY : _pred_msg_generate_messages_check_deps_state_data
+
+# fast build rule for target.
+_pred_msg_generate_messages_check_deps_state_data/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/_pred_msg_generate_messages_check_deps_state_data.dir/build.make pred_msg/CMakeFiles/_pred_msg_generate_messages_check_deps_state_data.dir/build
+.PHONY : _pred_msg_generate_messages_check_deps_state_data/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_generate_messages_lisp
+
+# Build rule for target.
+pred_msg_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages_lisp
+.PHONY : pred_msg_generate_messages_lisp
+
+# fast build rule for target.
+pred_msg_generate_messages_lisp/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages_lisp.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages_lisp.dir/build
+.PHONY : pred_msg_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_genpy
+
+# Build rule for target.
+pred_msg_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_genpy
+.PHONY : pred_msg_genpy
+
+# fast build rule for target.
+pred_msg_genpy/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_genpy.dir/build.make pred_msg/CMakeFiles/pred_msg_genpy.dir/build
+.PHONY : pred_msg_genpy/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_geneus
+
+# Build rule for target.
+pred_msg_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_geneus
+.PHONY : pred_msg_geneus
+
+# fast build rule for target.
+pred_msg_geneus/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_geneus.dir/build.make pred_msg/CMakeFiles/pred_msg_geneus.dir/build
+.PHONY : pred_msg_geneus/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_gencpp
+
+# Build rule for target.
+pred_msg_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_gencpp
+.PHONY : pred_msg_gencpp
+
+# fast build rule for target.
+pred_msg_gencpp/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_gencpp.dir/build.make pred_msg/CMakeFiles/pred_msg_gencpp.dir/build
+.PHONY : pred_msg_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_generate_messages
+
+# Build rule for target.
+pred_msg_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages
+.PHONY : pred_msg_generate_messages
+
+# fast build rule for target.
+pred_msg_generate_messages/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages.dir/build
+.PHONY : pred_msg_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_generate_messages_nodejs
+
+# Build rule for target.
+pred_msg_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_generate_messages_nodejs
+.PHONY : pred_msg_generate_messages_nodejs
+
+# fast build rule for target.
+pred_msg_generate_messages_nodejs/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_generate_messages_nodejs.dir/build.make pred_msg/CMakeFiles/pred_msg_generate_messages_nodejs.dir/build
+.PHONY : pred_msg_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_genlisp
+
+# Build rule for target.
+pred_msg_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_genlisp
+.PHONY : pred_msg_genlisp
+
+# fast build rule for target.
+pred_msg_genlisp/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_genlisp.dir/build.make pred_msg/CMakeFiles/pred_msg_genlisp.dir/build
+.PHONY : pred_msg_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named pred_msg_gennodejs
+
+# Build rule for target.
+pred_msg_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pred_msg_gennodejs
+.PHONY : pred_msg_gennodejs
+
+# fast build rule for target.
+pred_msg_gennodejs/fast:
+	$(MAKE) -f pred_msg/CMakeFiles/pred_msg_gennodejs.dir/build.make pred_msg/CMakeFiles/pred_msg_gennodejs.dir/build
+.PHONY : pred_msg_gennodejs/fast
+
+#=============================================================================
 # Target rules for targets named visualization_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1870,6 +2039,19 @@ help:
 	@echo "... controller_nmpc"
 	@echo "... record_init_ss_nonlinear_qp"
 	@echo "... LMPC_nonlinear_qp"
+	@echo "... pred_msg_generate_messages_cpp"
+	@echo "... pred_msg_generate_messages_eus"
+	@echo "... pred_msg_generate_messages_py"
+	@echo "... _pred_msg_generate_messages_check_deps_correct_data"
+	@echo "... _pred_msg_generate_messages_check_deps_state_data"
+	@echo "... pred_msg_generate_messages_lisp"
+	@echo "... pred_msg_genpy"
+	@echo "... pred_msg_geneus"
+	@echo "... pred_msg_gencpp"
+	@echo "... pred_msg_generate_messages"
+	@echo "... pred_msg_generate_messages_nodejs"
+	@echo "... pred_msg_genlisp"
+	@echo "... pred_msg_gennodejs"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... keyboard"
 	@echo "... racecar_simulator_generate_messages_eus"

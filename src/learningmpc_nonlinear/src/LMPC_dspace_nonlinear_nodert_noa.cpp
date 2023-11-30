@@ -29,10 +29,13 @@
 #include "OsqpEigen/OsqpEigen.h"
 #include <unsupported/Eigen/MatrixFunctions>
 #include <learningmpc_nonlinear/car_params.h>
+#include <learningmpc_nonlinear/gp_learn.h>
 
 const int nx = 6;   // [x, y, phi, v, r, beta]
 const int nu = 3;   // [Tf, Tr, delta]
 const int terminal_nx = 6;
+const int gp_nx = 6;
+int gp_dim = 3;
 const int RRT_INTERVAL = 0.1;
 using namespace std;
 using namespace Eigen;
@@ -125,6 +128,18 @@ private:
     double vel_;
     double yawdot_;
     double slip_angle_;
+    double last_vel_;
+    double last_yawdot_;
+    double last_slip_angle_;
+    double error_v_input_;
+    double error_r_input_;
+    double error_beta_input_;
+    double correct_v_0;
+    double correct_r_0;
+    double correct_beta_0;
+    bool isi0_;
+    bool start_record_ = false;
+    int run_num_;
     double s_prev_;
     double s_curr_;
     double s_ref_cur_;
@@ -140,6 +155,24 @@ private:
     int lap_;
     bool status_;
     int error_num_;
+
+    string covfun1_;
+    string covfun2_;
+    int input_dim_;
+    Vector3d params_;
+    double ell_;
+    double sf_;
+    double sn_;
+    int max_num_;
+
+    double x_input_[gp_nx];
+    double x_now_input_[gp_nx];
+
+    GP_Learn *gp_learn_v_;
+    GP_Learn *gp_learn_r_;
+    GP_Learn *gp_learn_beta_;
+
+    Matrix<double, nx, 1> add_state_pred_;
 
     // use dynamic model or not
     bool use_dyn_;
@@ -195,6 +228,7 @@ private:
 LMPC::LMPC(ros::NodeHandle &nh): nh_(nh){  // 构造函数
 
     getParameters(nh_);  // 从launch文件指引的lmpc_params.yaml提取参数
+    run_num_ = 0;
     init_occupancy_grid();
     ROS_INFO("Begin ...");
     track_ = new Track(waypoint_file, true);   // 根据waypoint_file里的xy数据，建立等space的x,y,s,phi,kr
@@ -254,6 +288,20 @@ LMPC::LMPC(ros::NodeHandle &nh): nh_(nh){  // 构造函数
     lap_time_file_.open("/home/sun234/racing_work/src/LearningMPC-master/data/lap_time_set_10.csv");
     lap_ = 0;
     error_num_ = 0;
+
+    input_dim_ = 6;
+    ROS_INFO("here1");
+    gp_learn_v_ = new GP_Learn(input_dim_, covfun1_, covfun2_, max_num_);
+    gp_learn_r_ = new GP_Learn(input_dim_, covfun1_, covfun2_, max_num_);
+    gp_learn_beta_ = new GP_Learn(input_dim_, covfun1_, covfun2_, max_num_);
+    ROS_INFO("here2");
+    ROS_INFO("ell_ = %f, sf_ = %f, sn_ = %f", ell_, sf_, sn_);
+    params_ << ell_, sf_, sn_;
+    ROS_INFO("here3");
+    gp_learn_v_ ->SetParams(params_);
+    gp_learn_r_ ->SetParams(params_);
+    gp_learn_beta_ ->SetParams(params_);
+    ROS_INFO("here4");
 }
 
 void LMPC::getParameters(ros::NodeHandle &nh) {
@@ -305,6 +353,13 @@ void LMPC::getParameters(ros::NodeHandle &nh) {
     nh.getParam("R_wheel", car.R_wheel);
     nh.getParam("moment_inertia", car.I_z);
     nh.getParam("mass", car.mass);
+
+    nh.getParam("cov_fun1", covfun1_);
+    nh.getParam("cov_fun2", covfun2_);
+    nh.getParam("ell", ell_);
+    nh.getParam("sf", sf_);
+    nh.getParam("sn", sn_);
+    nh.getParam("max_num", max_num_);
 }
 
 int compare_s(Sample& s1, Sample& s2){
@@ -542,6 +597,28 @@ void LMPC::run(){
         first_lap_ = false;
         curr_trajectory_.clear();
         time_ = 0;
+    }
+    if (!start_record_ && run_num_ <= 10){
+        run_num_++;
+    }else if(!start_record_ && run_num_ > 10){
+        start_record_ = true;
+    }
+
+    if(!first_run_ && start_record_){
+        x_input_[0] = last_vel_;
+        x_input_[1] = last_yawdot_;
+        x_input_[2] = last_slip_angle_;
+        x_input_[3] = TF_LAST;
+        x_input_[4] = TR_LAST;
+        x_input_[5] = STEER_LAST;
+        error_v_input_ = vel_ - (QPSolution_(nx + 3) - correct_v_0);
+        error_r_input_ = yawdot_ - (QPSolution_(nx + 4) - correct_r_0);
+        error_beta_input_ = slip_angle_ - (QPSolution_(nx + 5) - correct_beta_0);
+        ROS_INFO("error_v_input_ = %f, error_r_input_ = %f, error_beta_input_  = %f", error_v_input_, error_r_input_,error_beta_input_);
+        gp_learn_v_ ->AddPattern(x_input_, error_v_input_);
+        gp_learn_r_ ->AddPattern(x_input_, error_r_input_);
+        gp_learn_beta_ ->AddPattern(x_input_, error_beta_input_);
+        ROS_INFO("AddPattern_finish");
     }
 
     /*** select terminal state candidate and its convex safe set ***/
@@ -1051,6 +1128,26 @@ double tu35 = car.Bf+ tu34;
     Ad = (A*Ts).exp();
     Bd = M12*B;
     hd = M12*h;
+
+    if (isi0_){
+        add_state_pred_ << 0.0, 0.0, 0.0, correct_v_0, correct_r_0, correct_beta_0;
+        isi0_ = false;
+    }else{
+        x_now_input_[0] = v;
+        x_now_input_[1] = yaw_dot;
+        x_now_input_[2] = slip_angle;
+        x_now_input_[3] = T_f;
+        x_now_input_[4] = T_r;
+        x_now_input_[5] = delta;
+
+        add_state_pred_ << 0.0, 0.0, 0.0, gp_learn_v_->CalculateMu(x_now_input_), gp_learn_r_->CalculateMu(x_now_input_), gp_learn_beta_->CalculateMu(x_now_input_);
+
+    }
+    ROS_INFO("v_add = %f", gp_learn_v_->CalculateMu(x_now_input_));
+    ROS_INFO("r_add = %f", gp_learn_r_->CalculateMu(x_now_input_));
+    ROS_INFO("beta_add = %f", gp_learn_beta_->CalculateMu(x_now_input_));
+
+    hd = hd + add_state_pred_;
     // cout << "A = " << A << endl;
     // cout << "B = " << B << endl;
     // cout << "Ad = " << Ad << endl;
@@ -1118,6 +1215,18 @@ void LMPC::solve_MPC(const Matrix<double,nx,1>& terminal_candidate){
         }
         ROS_INFO("S_ref = %lf, X_ref = %lf, Y_ref = %lf, Yaw_ref = %lf, Vel_ref = %lf, Yaw_rate_ref = %lf, Beta_ref = %lf", s_ref, x_k_ref(0),  x_k_ref(1),  x_k_ref(2),  x_k_ref(3),  x_k_ref(4),  x_k_ref(5));
         s_ref_cur_ = s_ref;
+        if (i == 0){
+            x_now_input_[0] = vel_;
+            x_now_input_[1] = yawdot_;
+            x_now_input_[2] = slip_angle_;
+            x_now_input_[3] = TF_LAST;
+            x_now_input_[4] = TR_LAST;
+            x_now_input_[5] = STEER_LAST;
+            correct_v_0 = gp_learn_v_->CalculateMu(x_now_input_);
+            correct_r_0 = gp_learn_r_->CalculateMu(x_now_input_);
+            correct_beta_0 = gp_learn_beta_->CalculateMu(x_now_input_);
+            isi0_ = true;
+        }
         get_linearized_dynamics(Ad, Bd, hd, x_k_ref, u_k_ref, use_dyn_);   // 计算0阶离散线性系统矩阵Ad, Bd, hd
         ROS_INFO("HEREdone");
         /* form Hessian entries*/
@@ -1388,7 +1497,7 @@ void LMPC::solve_MPC(const Matrix<double,nx,1>& terminal_candidate){
 
     if(!solver.solve()) {
         cout<< "fail to solve problem"<<endl;
-        // ros::shutdown();
+        ros::shutdown();
         status_ = false;
         return;
     }
@@ -1440,12 +1549,15 @@ void LMPC::applyControl() {
     TF_LAST = QPSolution_((N+1)*nx);
     TR_LAST = QPSolution_((N+1)*nx+1);
     STEER_LAST = QPSolution_((N+1)*nx+2);
+    last_vel_ = vel_;
+    last_yawdot_ = yawdot_;
+    last_slip_angle_ = slip_angle_;
 }
 
 void LMPC::record_status(){
     std_msgs::String pred_state;
-    stringstream ss_x, ss_y, ss_v, ss_yaw, ss_r, ss_slip_angle, ss_Tf, ss_Tr, ss_delta,  ss_control_Tf, ss_control_Tr, ss_control_steer, ss_cur_x, ss_cur_y, ss_cur_yaw, ss_cur_v, ss_cur_r, ss_cur_slip_angle, ss_cur_Tf, ss_cur_Tr, ss_cur_delta, ss_vx_get, ss_vy_get, ss_vx_pre, ss_vy_pre, ss_error;
-    string s_state, s_x, s_y, s_v, s_yaw, s_r, s_slip_angle, s_Tf, s_Tr, s_delta,  s_control_Tf, s_control_Tr, s_control_steer, s_cur_x, s_cur_y, s_cur_yaw, s_cur_v, s_cur_r, s_cur_slip_angle, s_cur_Tf, s_cur_Tr, s_cur_delta, s_vx_get, s_vy_get, s_vx_pre, s_vy_pre, s_error;
+    stringstream ss_x, ss_y, ss_v, ss_yaw, ss_r, ss_slip_angle, ss_Tf, ss_Tr, ss_delta,  ss_control_Tf, ss_control_Tr, ss_control_steer, ss_cur_x, ss_cur_y, ss_cur_yaw, ss_cur_v, ss_cur_r, ss_cur_slip_angle, ss_cur_Tf, ss_cur_Tr, ss_cur_delta, ss_vx_get, ss_vy_get, ss_vx_pre, ss_vy_pre, ss_error,ss_correct_v, ss_correct_r, ss_correct_beta;
+    string s_state, s_x, s_y, s_v, s_yaw, s_r, s_slip_angle, s_Tf, s_Tr, s_delta,  s_control_Tf, s_control_Tr, s_control_steer, s_cur_x, s_cur_y, s_cur_yaw, s_cur_v, s_cur_r, s_cur_slip_angle, s_cur_Tf, s_cur_Tr, s_cur_delta, s_vx_get, s_vy_get, s_vx_pre, s_vy_pre, s_error, s_correct_v, s_correct_r, s_correct_beta;
     string comma = ",";
     ss_x << QPSolution_(nx);
     ss_y << QPSolution_(nx + 1);
@@ -1470,6 +1582,9 @@ void LMPC::record_status(){
     ss_vx_pre << QPSolution_(nx + 3) * cos(QPSolution_(nx + 5));
     ss_vy_pre << QPSolution_(nx + 3) * sin(QPSolution_(nx + 5));
     ss_error << error_num_;
+    ss_correct_v << correct_v_0;
+    ss_correct_r << correct_r_0;
+    ss_correct_beta << correct_beta_0;
 
     ss_x >> s_x;
     ss_y >> s_y;
@@ -1494,8 +1609,11 @@ void LMPC::record_status(){
     ss_vx_pre >> s_vx_pre;
     ss_vy_pre >> s_vy_pre;
     ss_error >> s_error;
+    ss_correct_v >> s_correct_v;
+    ss_correct_r >> s_correct_r;
+    ss_correct_beta >> s_correct_beta;
 
-    s_state = s_x+ comma+s_y+comma+ s_yaw + comma + s_v + comma + s_r + comma + s_slip_angle + comma+ s_Tf +comma+s_Tr + comma + s_delta + comma + s_cur_x + comma + s_cur_y + comma + s_cur_yaw + comma + s_cur_v + comma + s_cur_r + comma + s_cur_slip_angle + comma + s_cur_Tf +comma+ s_cur_Tr + comma + s_cur_delta + comma + s_vx_get +comma + s_vy_get + comma + s_vx_pre + comma + s_vy_pre + comma + s_error;
+    s_state = s_x+ comma+s_y+comma+ s_yaw + comma + s_cur_x + comma + s_cur_y + comma + s_cur_yaw + " " + comma + s_v + comma + s_r + comma + s_slip_angle + comma + s_correct_v + comma + s_correct_r + comma + s_correct_beta + comma + s_cur_v + comma + s_cur_r + comma + s_cur_slip_angle + " " + comma+ s_Tf +comma+s_Tr + comma + s_delta + comma + s_cur_Tf +comma+ s_cur_Tr + comma + s_cur_delta +" " + comma +s_vx_pre + comma + s_vy_pre + comma + s_vx_get +comma + s_vy_get + " " + comma + s_error;
     pred_state.data = s_state;
     pred_pub_.publish(pred_state);
 }
@@ -1598,6 +1716,7 @@ int main(int argc, char **argv){
         if(marker_state == 0 or marker_odom == 0){
             continue;
         }
+        ROS_INFO("start_run");
         lmpc.run();
         ts_calculate = clock();
         ROS_INFO("time_calculate = %f",(ts_calculate - ts_get_data)/CLOCKS_PER_SEC);

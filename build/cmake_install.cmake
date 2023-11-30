@@ -136,6 +136,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/sun234/racing_work/build/learningmpc_nonlinear/cmake_install.cmake")
   include("/home/sun234/racing_work/build/ltv_mpc/cmake_install.cmake")
   include("/home/sun234/racing_work/build/nonlinear_mpc_qp/cmake_install.cmake")
+  include("/home/sun234/racing_work/build/pred_msg/cmake_install.cmake")
   include("/home/sun234/racing_work/build/racecar_simulator/cmake_install.cmake")
 
 endif()

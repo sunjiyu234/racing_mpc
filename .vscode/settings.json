@@ -78,6 +78,9 @@
         "*.ipp": "cpp",
         "matrixfunctions": "cpp",
         "sparse": "cpp",
-        "*.tpp": "cpp"
+        "*.tpp": "cpp",
+        "any": "cpp",
+        "forward_list": "cpp",
+        "core": "cpp"
     }
 }

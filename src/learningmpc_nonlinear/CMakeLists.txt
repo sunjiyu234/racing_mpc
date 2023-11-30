@@ -124,7 +124,7 @@ include_directories(
   ${EIGEN3_INCLUDE_DIRS}
 )
 
-add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa.cpp)
+add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp src/gp_learn.cpp)
 target_link_libraries(LMPC_nonlinear ${catkin_LIBRARIES})
 add_dependencies(LMPC_nonlinear ${catkin_EXPORTED_TARGETS})
 
@@ -133,6 +133,10 @@ target_link_libraries(record_init_ss_nonlinear ${catkin_LIBRARIES})
 add_dependencies(record_init_ss_nonlinear ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(LMPC_nonlinear OsqpEigen::OsqpEigen osqp::osqp)
+target_link_libraries(LMPC_nonlinear
+      	   ${catkin_LIBRARIES}
+            gp
+	)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

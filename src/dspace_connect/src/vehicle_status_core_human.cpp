@@ -306,10 +306,10 @@ namespace VehicleStatusNS
     date[1].Data[1] = (int)((accel + 8) / 0.00025) / (16 * 16);
     date[1].Data[2] = (int)((speed * 3.6 + 20) / 0.0025) % (16 * 16);
     date[1].Data[3] = (int)((speed * 3.6 + 20) / 0.0025) / (16 * 16);
-    date[1].Data[4] = (int)((accel + 2500) / 0.08) % (16 * 16);
-    date[1].Data[5] = (int)((accel + 2500) / 0.08) / (16 * 16);
-    date[1].Data[6] = (int)((speed + 2500) / 0.08) % (16 * 16);
-    date[1].Data[7] = (int)((speed + 2500) / 0.08) / (16 * 16);
+    date[1].Data[4] = (int)((speed + 2500) / 0.08) % (16 * 16);
+    date[1].Data[5] = (int)((speed + 2500) / 0.08) / (16 * 16);
+    date[1].Data[6] = (int)((accel + 2500) / 0.08) % (16 * 16);
+    date[1].Data[7] = (int)((accel + 2500) / 0.08) / (16 * 16);
     auto now_time_2 = std::chrono::system_clock::now( );
     auto now_ms_2 = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time_1);
     auto time_value_2 = now_ms_2.time_since_epoch().count();

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
   <!-- Load all parameters -->
-  <rosparam command="load" file="$(find learningmpc_nonlinear)/Lmpc_params_dspace_nodert.yaml"/>
-  <param name="waypoint_file" value ="$(find learningmpc_nonlinear)/data/30m_circle_right.csv"/>
+  <rosparam command="load" file="$(find learningmpc_nonlinear)/Lmpc_params_dspace_nodert_cal_f_const_linear_ref.yaml"/>
+  <param name="waypoint_file" value ="$(find learningmpc_nonlinear)/data/racing_2_source.csv"/>
   <!-- Launch the learning MPC -->
   <node pkg="learningmpc_nonlinear" name="record_init_ss_nonlinear" type="record_init_ss_nonlinear" output="screen">
   </node>

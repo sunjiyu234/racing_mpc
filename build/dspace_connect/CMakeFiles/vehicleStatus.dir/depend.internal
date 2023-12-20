@@ -70,10 +70,10 @@ dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o
  /opt/ros/melodic/include/std_msgs/Header.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o
  /home/sun234/racing_work/src/dspace_connect/include/dspace_connect/controlcan.h
  /home/sun234/racing_work/src/dspace_connect/include/dspace_connect/vehicle_status_core.h
- /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp
+ /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp
  /opt/ros/melodic/include/ackermann_msgs/AckermannDrive.h
  /opt/ros/melodic/include/ackermann_msgs/AckermannDriveStamped.h
  /opt/ros/melodic/include/geometry_msgs/Point.h

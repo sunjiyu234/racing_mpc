@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o"
-  "CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o"
+  "CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o"
   "/home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus.pdb"
   "/home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus"
 )

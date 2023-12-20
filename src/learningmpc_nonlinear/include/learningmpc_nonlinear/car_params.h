@@ -14,4 +14,6 @@ struct CarParams {
     double Cr;
     double Br;
     double Er;
+    double Ff;
+    double kd;
 };

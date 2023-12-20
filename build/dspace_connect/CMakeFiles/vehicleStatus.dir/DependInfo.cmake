@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sun234/racing_work/src/dspace_connect/src/vehicle_status.cpp" "/home/sun234/racing_work/build/dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o"
-  "/home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp" "/home/sun234/racing_work/build/dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o"
+  "/home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp" "/home/sun234/racing_work/build/dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

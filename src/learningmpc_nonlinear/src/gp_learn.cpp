@@ -28,7 +28,10 @@ void GP_Learn::AddPattern(const double x[], double y){
     if (gp_->get_sampleset_size() < max_num_){
         gp_->add_pattern(x, y);
     }else{
+        double time_start_replace = clock();
         gp_->replace_pattern(0, x, y);
+        double time_end_replace = clock();
+        std::cout << "Time_replace = " << (time_end_replace  - time_start_replace)/CLOCKS_PER_SEC;
     }
 }
 

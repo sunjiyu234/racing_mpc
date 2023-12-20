@@ -28,7 +28,7 @@ ros/ros.h
 dspace_connect/vehicle_status_core.h
 -
 
-/home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp
+/home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp
 dspace_connect/vehicle_status_core.h
 -
 ackermann_msgs/AckermannDriveStamped.h

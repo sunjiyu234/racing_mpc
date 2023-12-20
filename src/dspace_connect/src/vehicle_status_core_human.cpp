@@ -1,4 +1,4 @@
-#include <dspace_connect/vehicle_status_core.h>
+#include <dspace_connect/vehicle_status_core_human.h>
 #include <ackermann_msgs/AckermannDriveStamped.h>
 #include <fstream>
 #include <chrono>
@@ -38,7 +38,7 @@ namespace VehicleStatusNS
   VehicleStatus::VehicleStatus()
   {
      pub_odom = nh.advertise<nav_msgs::Odometry>("odom", 10);
-     sub_desired_status = nh.subscribe("nav", 1, &VehicleStatus::CallbackGetDesiredStatus, this);
+     sub_desired_status = nh.subscribe("/joy", 1, &VehicleStatus::CallbackGetDesiredStatus, this);
      can_state_pub = nh.advertise< sensor_msgs::Imu>("state_odom", 10);
 
     ros::NodeHandle pnh("~");
@@ -272,13 +272,13 @@ namespace VehicleStatusNS
     VCI_Transmit(device_type, device_index, channel_index, date, length);
   }
 
-  void VehicleStatus::CallbackGetDesiredStatus(const ackermann_msgs::AckermannDriveStampedConstPtr &msgs)
+  void VehicleStatus::CallbackGetDesiredStatus(const sensor_msgs::JoyConstPtr &msgs)
   {
     auto now_time_start = std::chrono::system_clock::now( );
     auto now_ms_start = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time_start);
     auto time_value_start = now_ms_start.time_since_epoch().count();
     double steering_ratio = 1.0;
-    double wheel_steer = msgs->drive.steering_angle;
+    double wheel_steer = msgs->axes[0] * 450.0 / 15.0;
     VCI_CAN_OBJ date[2];
     DWORD length = 2;
     date[0].ID =  0x100; //转角发送
@@ -296,8 +296,17 @@ namespace VehicleStatusNS
     auto now_time_1 = std::chrono::system_clock::now( );
     auto now_ms_1 = std::chrono::time_point_cast<std::chrono::milliseconds>(now_time_1);
     auto time_value_1 = now_ms_1.time_since_epoch().count();
-   double accel = msgs->drive.acceleration;
-   double speed = msgs->drive.speed;
+    double throttle = (msgs->axes[2] + 1.0) * 50.0;   // -1.0->1.0  0->100
+    double brake = (msgs->axes[3] + 1.0) * 50.0;   // -1.0->1.0  0->100
+    double accel = 0.0;
+    double speed = 0.0;
+    if (brake > 0){
+      speed = brake / 100.0 * (-1500);
+      accel = brake / 100.0 * (-1500);
+    }else{
+      speed = throttle / 100.0 * (1500);
+      accel = throttle / 100.0 * (1500);
+    }
     date[1].ID = 0x1FF; //油门发送
     date[1].RemoteFlag = remote_flag;
     date[1].ExternFlag = extern_flag;

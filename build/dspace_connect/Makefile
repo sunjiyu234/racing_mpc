@@ -956,32 +956,32 @@ src/vehicle_status.cpp.s:
 	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.s
 .PHONY : src/vehicle_status.cpp.s
 
-src/vehicle_status_core_human.o: src/vehicle_status_core_human.cpp.o
+src/vehicle_status_core_drive.o: src/vehicle_status_core_drive.cpp.o
 
-.PHONY : src/vehicle_status_core_human.o
+.PHONY : src/vehicle_status_core_drive.o
 
 # target to build an object file
-src/vehicle_status_core_human.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o
-.PHONY : src/vehicle_status_core_human.cpp.o
+src/vehicle_status_core_drive.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o
+.PHONY : src/vehicle_status_core_drive.cpp.o
 
-src/vehicle_status_core_human.i: src/vehicle_status_core_human.cpp.i
+src/vehicle_status_core_drive.i: src/vehicle_status_core_drive.cpp.i
 
-.PHONY : src/vehicle_status_core_human.i
+.PHONY : src/vehicle_status_core_drive.i
 
 # target to preprocess a source file
-src/vehicle_status_core_human.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.i
-.PHONY : src/vehicle_status_core_human.cpp.i
+src/vehicle_status_core_drive.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.i
+.PHONY : src/vehicle_status_core_drive.cpp.i
 
-src/vehicle_status_core_human.s: src/vehicle_status_core_human.cpp.s
+src/vehicle_status_core_drive.s: src/vehicle_status_core_drive.cpp.s
 
-.PHONY : src/vehicle_status_core_human.s
+.PHONY : src/vehicle_status_core_drive.s
 
 # target to generate assembly for a file
-src/vehicle_status_core_human.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.s
-.PHONY : src/vehicle_status_core_human.cpp.s
+src/vehicle_status_core_drive.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.s
+.PHONY : src/vehicle_status_core_drive.cpp.s
 
 # Help Target
 help:
@@ -1051,9 +1051,9 @@ help:
 	@echo "... src/vehicle_status.o"
 	@echo "... src/vehicle_status.i"
 	@echo "... src/vehicle_status.s"
-	@echo "... src/vehicle_status_core_human.o"
-	@echo "... src/vehicle_status_core_human.i"
-	@echo "... src/vehicle_status_core_human.s"
+	@echo "... src/vehicle_status_core_drive.o"
+	@echo "... src/vehicle_status_core_drive.i"
+	@echo "... src/vehicle_status_core_drive.s"
 .PHONY : help
 
 

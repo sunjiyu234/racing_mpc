@@ -263,7 +263,7 @@ void PathPlanner::Planner::computeSplineWithPoints() {
     for(int i = 0; i < ccur.size(); i++){
         outfile << ccur[i] << endl;
         // outfile << min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)) << endl;
-        cvx.push_back(min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
+        cvx.push_back(min(47.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
     }
     outfile.close();
     outfile_xy.close();

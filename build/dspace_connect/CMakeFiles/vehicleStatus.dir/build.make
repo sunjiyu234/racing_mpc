@@ -81,40 +81,40 @@ dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o.provides: d
 dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o.provides.build: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o
 
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: dspace_connect/CMakeFiles/vehicleStatus.dir/flags.make
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o: /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o"
-	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o -c /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o: dspace_connect/CMakeFiles/vehicleStatus.dir/flags.make
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o: /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o"
+	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o -c /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.i"
-	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp > CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.i
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.i"
+	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp > CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.i
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.s"
-	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_human.cpp -o CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.s
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.s"
+	cd /home/sun234/racing_work/build/dspace_connect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/dspace_connect/src/vehicle_status_core_drive.cpp -o CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.s
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.requires:
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.requires:
 
-.PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.requires
+.PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.requires
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.provides: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.requires
-	$(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.provides.build
-.PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.provides
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.provides: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.requires
+	$(MAKE) -f dspace_connect/CMakeFiles/vehicleStatus.dir/build.make dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.provides.build
+.PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.provides
 
-dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.provides.build: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o
+dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.provides.build: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o
 
 
 # Object files for target vehicleStatus
 vehicleStatus_OBJECTS = \
 "CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o" \
-"CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o"
+"CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o"
 
 # External object files for target vehicleStatus
 vehicleStatus_EXTERNAL_OBJECTS =
 
 /home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o
-/home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o
+/home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o
 /home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: dspace_connect/CMakeFiles/vehicleStatus.dir/build.make
 /home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: /opt/ros/melodic/lib/libserial.so
 /home/sun234/racing_work/devel/lib/dspace_connect/vehicleStatus: /opt/ros/melodic/lib/libtf.so
@@ -157,7 +157,7 @@ dspace_connect/CMakeFiles/vehicleStatus.dir/build: /home/sun234/racing_work/deve
 .PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/build
 
 dspace_connect/CMakeFiles/vehicleStatus.dir/requires: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status.cpp.o.requires
-dspace_connect/CMakeFiles/vehicleStatus.dir/requires: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_human.cpp.o.requires
+dspace_connect/CMakeFiles/vehicleStatus.dir/requires: dspace_connect/CMakeFiles/vehicleStatus.dir/src/vehicle_status_core_drive.cpp.o.requires
 
 .PHONY : dspace_connect/CMakeFiles/vehicleStatus.dir/requires
 

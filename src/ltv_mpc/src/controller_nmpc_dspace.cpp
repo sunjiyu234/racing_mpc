@@ -200,7 +200,7 @@ int main(int argc, char **argv)
 
   //加载点集路径
   ros::NodeHandle nh_priv("~");
-  std::string track_filename = nh_priv.param<std::string>("track_filename", "/home/sun234/racing_work/src/learningmpc_nonlinear/data/30m_circle_right.csv");
+  std::string track_filename = nh_priv.param<std::string>("track_filename", "/home/sun234/racing_work/src/learningmpc_nonlinear/data/racing_2_source.csv");
   gPlanner.cvx.push_back(v_target);
   // cout << "here3"<< endl;
   gPlanner.loadPath(track_filename,1);   //txt文件中的点存储在gPlanner.waypoints_里

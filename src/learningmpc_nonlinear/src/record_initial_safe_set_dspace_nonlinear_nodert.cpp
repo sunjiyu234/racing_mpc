@@ -77,7 +77,7 @@ Record_SS::Record_SS(ros::NodeHandle &nh) : nh_(nh) {
     ros_time_prev_ = ros::Time::now().toSec();
     time_=0; lap_=0;
 
-    data_file_.open( "/home/sun234/racing_work/src/ltv_mpc/src/initial_safe_set_dspace_30circle_10ms_nodert.csv");
+    data_file_.open( "/home/sun234/racing_work/src/ltv_mpc/src/initial_safe_set_dspace_racing_2_13ms.csv");
 }
 
 void Record_SS::odom_callback(const nav_msgs::Odometry::ConstPtr &odom_msg){

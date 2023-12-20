@@ -124,7 +124,7 @@ include_directories(
   ${EIGEN3_INCLUDE_DIRS}
 )
 
-add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre.cpp src/gp_learn.cpp)
+add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_with_vehicle_deal_fail.cpp src/gp_learn.cpp)
 target_link_libraries(LMPC_nonlinear ${catkin_LIBRARIES})
 add_dependencies(LMPC_nonlinear ${catkin_EXPORTED_TARGETS})
 

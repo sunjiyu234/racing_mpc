@@ -142,7 +142,7 @@ link_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(vehicleStatus src/vehicle_status.cpp src/vehicle_status_core_human.cpp)
+add_executable(vehicleStatus src/vehicle_status.cpp src/vehicle_status_core_drive.cpp)
 add_executable(canread src/can0_READ_DSPACE.cpp)
 
 ## Rename C++ executable without prefix

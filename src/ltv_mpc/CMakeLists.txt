@@ -53,11 +53,11 @@ find_package(Eigen3 REQUIRED)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  sample.msg
+  sample_lst.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -113,6 +113,7 @@ catkin_package(
 #  LIBRARIES ltv_mpc
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
+CATKIN_DEPENDS roscpp std_msgs message_runtime
 )
 
 ###########
@@ -143,7 +144,7 @@ link_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(controller_nmpc src/controller_nmpc_dspace.cpp src/nmpc_ey_constraint_dspace.cpp src/pid_speed.cpp src/path_planner_with_point_select.cpp src/lms_filter.cpp)
+add_executable(controller_nmpc src/controller_nmpc_dspace_offline.cpp src/nmpc_ey_constraint_dspace.cpp src/pid_speed.cpp src/path_planner_with_point_select.cpp src/lms_filter.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

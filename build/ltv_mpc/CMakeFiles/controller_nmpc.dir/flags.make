@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ltv_mpc\"
 
-CXX_INCLUDES = -I/home/sun234/racing_work/src/ltv_mpc/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/home/sun234/racing_work/src/ltv_mpc/osqp/include 
+CXX_INCLUDES = -I/home/sun234/racing_work/devel/include -I/home/sun234/racing_work/src/ltv_mpc/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/home/sun234/racing_work/src/ltv_mpc/osqp/include 
 

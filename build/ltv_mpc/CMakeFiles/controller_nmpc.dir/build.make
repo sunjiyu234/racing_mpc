@@ -57,28 +57,28 @@ include ltv_mpc/CMakeFiles/controller_nmpc.dir/progress.make
 # Include the compile flags for this target's objects.
 include ltv_mpc/CMakeFiles/controller_nmpc.dir/flags.make
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o: ltv_mpc/CMakeFiles/controller_nmpc.dir/flags.make
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o: /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o"
-	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o -c /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace.cpp
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o: ltv_mpc/CMakeFiles/controller_nmpc.dir/flags.make
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o: /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace_offline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o"
+	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o -c /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace_offline.cpp
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.i"
-	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace.cpp > CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.i
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.i"
+	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace_offline.cpp > CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.i
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.s"
-	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace.cpp -o CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.s
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.s"
+	cd /home/sun234/racing_work/build/ltv_mpc && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sun234/racing_work/src/ltv_mpc/src/controller_nmpc_dspace_offline.cpp -o CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.s
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.requires:
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.requires:
 
-.PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.requires
+.PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.requires
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.provides: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.requires
-	$(MAKE) -f ltv_mpc/CMakeFiles/controller_nmpc.dir/build.make ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.provides.build
-.PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.provides
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.provides: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.requires
+	$(MAKE) -f ltv_mpc/CMakeFiles/controller_nmpc.dir/build.make ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.provides.build
+.PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.provides
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.provides.build: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o
+ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.provides.build: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o
 
 
 ltv_mpc/CMakeFiles/controller_nmpc.dir/src/nmpc_ey_constraint_dspace.cpp.o: ltv_mpc/CMakeFiles/controller_nmpc.dir/flags.make
@@ -179,7 +179,7 @@ ltv_mpc/CMakeFiles/controller_nmpc.dir/src/lms_filter.cpp.o.provides.build: ltv_
 
 # Object files for target controller_nmpc
 controller_nmpc_OBJECTS = \
-"CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o" \
+"CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o" \
 "CMakeFiles/controller_nmpc.dir/src/nmpc_ey_constraint_dspace.cpp.o" \
 "CMakeFiles/controller_nmpc.dir/src/pid_speed.cpp.o" \
 "CMakeFiles/controller_nmpc.dir/src/path_planner_with_point_select.cpp.o" \
@@ -188,7 +188,7 @@ controller_nmpc_OBJECTS = \
 # External object files for target controller_nmpc
 controller_nmpc_EXTERNAL_OBJECTS =
 
-/home/sun234/racing_work/devel/lib/ltv_mpc/controller_nmpc: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o
+/home/sun234/racing_work/devel/lib/ltv_mpc/controller_nmpc: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o
 /home/sun234/racing_work/devel/lib/ltv_mpc/controller_nmpc: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/nmpc_ey_constraint_dspace.cpp.o
 /home/sun234/racing_work/devel/lib/ltv_mpc/controller_nmpc: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/pid_speed.cpp.o
 /home/sun234/racing_work/devel/lib/ltv_mpc/controller_nmpc: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/path_planner_with_point_select.cpp.o
@@ -235,7 +235,7 @@ ltv_mpc/CMakeFiles/controller_nmpc.dir/build: /home/sun234/racing_work/devel/lib
 
 .PHONY : ltv_mpc/CMakeFiles/controller_nmpc.dir/build
 
-ltv_mpc/CMakeFiles/controller_nmpc.dir/requires: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o.requires
+ltv_mpc/CMakeFiles/controller_nmpc.dir/requires: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o.requires
 ltv_mpc/CMakeFiles/controller_nmpc.dir/requires: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/nmpc_ey_constraint_dspace.cpp.o.requires
 ltv_mpc/CMakeFiles/controller_nmpc.dir/requires: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/pid_speed.cpp.o.requires
 ltv_mpc/CMakeFiles/controller_nmpc.dir/requires: ltv_mpc/CMakeFiles/controller_nmpc.dir/src/path_planner_with_point_select.cpp.o.requires

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11 -std=gnu++14
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"learningmpc_nonlinear\"
 
-CXX_INCLUDES = -I/home/sun234/racing_work/src/learningmpc_nonlinear/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/osqp 
+CXX_INCLUDES = -I/home/sun234/racing_work/src/learningmpc_nonlinear/include -I/home/sun234/racing_work/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/osqp 
 

@@ -60,6 +60,10 @@ namespace NMPC {
       double kr;
       double g;
       double vx;
+      double r_wheel;
+      double miu;
+      double Ff;
+      double kd;
     };
 
     struct ControlOutput{

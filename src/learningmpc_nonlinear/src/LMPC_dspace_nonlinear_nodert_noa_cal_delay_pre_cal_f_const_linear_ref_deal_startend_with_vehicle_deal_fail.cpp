@@ -342,7 +342,10 @@ LMPC::LMPC(ros::NodeHandle &nh): nh_(nh){  // 构造函数
     status_ = true;
     first_iter_ = true;
     ROS_INFO("START_WORK");
+    double time_init_ss_start = clock();
     init_SS_from_data(init_data_file);
+    double time_init_ss_end = clock();
+    ROS_INFO("time_init_SS = %f",(time_init_ss_end - time_init_ss_start)/CLOCKS_PER_SEC);
     lap_time_file_.open("/home/sun234/racing_work/src/LearningMPC-master/data/racing_2_lap_time_set_10_max_ay_08_cal_fail_300_without_s_final_5_vx_10_q_v_change_deal_fail_3.csv");
     lap_ = 0;
     error_num_ = 0;
@@ -462,9 +465,6 @@ void LMPC::init_SS_from_data(string data_file) {   // 从已有采样集文件�
             update_cost_to_go(traj);
             SS_.push_back(traj);
             traj.clear();
-        }
-        for (int i = 0; i < vec.size(); i ++){
-            
         }
         // cout << endl;
         sample.x(0) = std::stof(vec.at(1));   // x
@@ -1536,7 +1536,7 @@ void LMPC::solve_MPC(const Matrix<double,nx,1>& terminal_candidate){
             for (int row=0; row<nu; row++){
                 constraintMatrix.insert((N+1)*nx+ 2*(N) +i*nu+row, (N+1)*nx+i*nu+row) = 1.0;
             }
-            STEER_MAX = min(atan(car.friction_coeff * 9.81 * car.wheelbase / (x_k_ref(3) * x_k_ref(3))), STEER_MAX);
+            STEER_MAX = min(atan(0.95*car.friction_coeff * 9.81 * car.wheelbase / (x_k_ref(3) * x_k_ref(3))), STEER_MAX);
             // cout << "STEER_MAX = " << STEER_MAX << endl;
             // input bounds: speed and steer
             lower.segment<nu>((N+1)*nx+ 2*(N) +i*nu) <<  - TF_MAX, -TR_MAX, -STEER_MAX;

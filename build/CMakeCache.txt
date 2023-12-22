@@ -578,6 +578,9 @@ libqp_DIR:PATH=libqp_DIR-NOTFOUND
 //Value Computed by CMake
 ltv_mpc_BINARY_DIR:STATIC=/home/sun234/racing_work/build/ltv_mpc
 
+//The directory containing a CMake configuration file for ltv_mpc.
+ltv_mpc_DIR:PATH=/home/sun234/racing_work/devel/share/ltv_mpc/cmake
+
 //Value Computed by CMake
 ltv_mpc_SOURCE_DIR:STATIC=/home/sun234/racing_work/src/ltv_mpc
 

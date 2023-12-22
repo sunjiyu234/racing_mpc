@@ -5,4 +5,4 @@ Description: Description of learningmpc_nonlinear
 Version: 0.0.0
 Cflags: -I/home/sun234/racing_work/src/learningmpc_nonlinear/include
 Libs: -L${prefix}/lib -llearningmpc_nonlinear
-Requires: roscpp rospy std_msgs
+Requires: roscpp rospy std_msgs message_runtime

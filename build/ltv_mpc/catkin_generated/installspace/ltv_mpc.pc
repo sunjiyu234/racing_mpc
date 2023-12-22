@@ -3,6 +3,6 @@ prefix=/home/sun234/racing_work/install
 Name: ltv_mpc
 Description: Description of ltv_mpc
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp std_msgs message_runtime

@@ -53,6 +53,24 @@ CMAKE_BINARY_DIR = /home/sun234/racing_work/build
 # Include the progress variables for this target.
 include ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs.dir/progress.make
 
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js
+
+
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js: /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ltv_mpc/sample.msg"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ltv_mpc/sample_lst.msg"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
+ltv_mpc_generate_messages_nodejs: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js
 ltv_mpc_generate_messages_nodejs: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs.dir/build.make
 
 .PHONY : ltv_mpc_generate_messages_nodejs

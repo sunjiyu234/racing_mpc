@@ -229,6 +229,8 @@ void PathPlanner::Planner::computeSplineWithPoints() {
         fclose(file_2);
     }
     */
+    cout << "spline_max_t_ = " << spline_max_t_ << endl;
+    cout << "cvx size = " <<cvx.size() << endl;
 
     for(double i = 0.01; i < spline_max_t_; i=i+0.01){
         double kr_now;
@@ -250,7 +252,7 @@ void PathPlanner::Planner::computeSplineWithPoints() {
                 kr_now = -kr_now;
             }
         }
-        if (abs(kr_now) > 0.7){
+        if (abs(kr_now) > 0.04){
           ccur.push_back(ccur[ccur.size() - 1]);
         }else{
           ccur.push_back(kr_now);
@@ -263,12 +265,19 @@ void PathPlanner::Planner::computeSplineWithPoints() {
     for(int i = 0; i < ccur.size(); i++){
         outfile << ccur[i] << endl;
         // outfile << min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)) << endl;
-        cvx.push_back(min(47.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
+        cvx.push_back(min(36.0/3.6, pow((0.65 * 9.8 / ccur[i]),0.5)));
     }
     outfile.close();
     outfile_xy.close();
-    cout << "here right"<<endl;
 
+}
+
+void PathPlanner::Planner::set_cvx(vector<double> carsim_s_list, vector<double> carsim_v_list){
+  spline_s_v_.set_points(carsim_s_list, carsim_v_list);
+  for(double i = 0; i <  ccur.size(); ++i){
+    double s_curr_carsim = spline_s_(i * 0.01);
+    cvx.at(i) = min(spline_s_v_(s_curr_carsim), pow((0.65 * 9.8 / ccur[i]),0.5));
+  }
 }
 
 /*

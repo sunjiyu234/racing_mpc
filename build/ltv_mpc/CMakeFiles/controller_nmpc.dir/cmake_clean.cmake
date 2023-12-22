@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace.cpp.o"
+  "CMakeFiles/controller_nmpc.dir/src/controller_nmpc_dspace_offline.cpp.o"
   "CMakeFiles/controller_nmpc.dir/src/nmpc_ey_constraint_dspace.cpp.o"
   "CMakeFiles/controller_nmpc.dir/src/pid_speed.cpp.o"
   "CMakeFiles/controller_nmpc.dir/src/path_planner_with_point_select.cpp.o"

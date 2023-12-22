@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  message_generation
+  ltv_mpc
 )
 
 ## System dependencies are found with CMake's conventions
@@ -52,8 +54,6 @@ find_package(Boost REQUIRED COMPONENTS system)
 ## Generate messages in the 'msg' folder
 # add_message_files(
 #   FILES
-#   Message1.msg
-#   Message2.msg
 # )
 
 ## Generate services in the 'srv' folder
@@ -71,10 +71,10 @@ find_package(Boost REQUIRED COMPONENTS system)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -108,7 +108,7 @@ find_package(Boost REQUIRED COMPONENTS system)
 catkin_package(
  INCLUDE_DIRS include
  LIBRARIES learningmpc_nonlinear
- CATKIN_DEPENDS roscpp rospy std_msgs
+ CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
  DEPENDS system_lib
 )
 
@@ -124,7 +124,7 @@ include_directories(
   ${EIGEN3_INCLUDE_DIRS}
 )
 
-add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_with_vehicle_deal_fail.cpp src/gp_learn.cpp)
+add_executable(LMPC_nonlinear src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp src/gp_learn.cpp)
 target_link_libraries(LMPC_nonlinear ${catkin_LIBRARIES})
 add_dependencies(LMPC_nonlinear ${catkin_EXPORTED_TARGETS})
 

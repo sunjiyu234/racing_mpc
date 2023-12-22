@@ -42,6 +42,7 @@ namespace PathPlanner {
         double randomFloat();
     public:
         Planner();
+        tk::spline spline_s_v_;
         double goal_x_;
         double goal_y_;
         double total_s_;
@@ -56,6 +57,7 @@ namespace PathPlanner {
         vector<double> ccur;
         bool loadPath(std::string filename, double scale = 1);
         void getPath(const PathPlanner::PoseStamped &cur_pose, double dt, double v_ref, double v_min, double k, double max_brake_accel, int n, std::vector<PathPlanner::PoseStamped> *path);
+        void set_cvx(vector<double> carsim_s_list, vector<double> carsim_v_list);
         // void runTests();
     };
 }

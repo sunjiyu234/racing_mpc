@@ -54,7 +54,11 @@ CMAKE_BINARY_DIR = /home/sun234/racing_work/build
 include ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp.dir/progress.make
 
 ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/sample.h
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gpoutput.h
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gpinput.h
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h
 ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h
 
 
 /home/sun234/racing_work/devel/include/ltv_mpc/sample.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
@@ -63,16 +67,49 @@ ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from ltv_mpc/sample.msg"
 	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
 
+/home/sun234/racing_work/devel/include/ltv_mpc/gpoutput.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/sun234/racing_work/devel/include/ltv_mpc/gpoutput.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gpoutput.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ltv_mpc/gpoutput.msg"
+	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/sun234/racing_work/devel/include/ltv_mpc/gpinput.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/sun234/racing_work/devel/include/ltv_mpc/gpinput.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gpinput.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from ltv_mpc/gpinput.msg"
+	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h: /home/sun234/racing_work/src/ltv_mpc/msg/gp_data.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from ltv_mpc/gp_data.msg"
+	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/msg/gp_data.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+
 /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
 /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h: /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg
 /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h: /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg
 /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from ltv_mpc/sample_lst.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from ltv_mpc/sample_lst.msg"
 	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /home/sun234/racing_work/src/ltv_mpc/srv/gp_srv.srv
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /opt/ros/melodic/share/gencpp/msg.h.template
+/home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h: /opt/ros/melodic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from ltv_mpc/gp_srv.srv"
+	cd /home/sun234/racing_work/src/ltv_mpc && /home/sun234/racing_work/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/sun234/racing_work/src/ltv_mpc/srv/gp_srv.srv -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/include/ltv_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
 
 ltv_mpc_generate_messages_cpp: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp
 ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/sample.h
+ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gpoutput.h
+ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gpinput.h
+ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gp_data.h
 ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/sample_lst.h
+ltv_mpc_generate_messages_cpp: /home/sun234/racing_work/devel/include/ltv_mpc/gp_srv.h
 ltv_mpc_generate_messages_cpp: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_cpp.dir/build.make
 
 .PHONY : ltv_mpc_generate_messages_cpp

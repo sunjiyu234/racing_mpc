@@ -41,7 +41,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ltv_mpc/msg" TYPE FILE FILES
     "/home/sun234/racing_work/src/ltv_mpc/msg/sample.msg"
     "/home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg"
+    "/home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg"
+    "/home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg"
+    "/home/sun234/racing_work/src/ltv_mpc/msg/gp_data.msg"
     )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ltv_mpc/srv" TYPE FILE FILES "/home/sun234/racing_work/src/ltv_mpc/srv/gp_srv.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

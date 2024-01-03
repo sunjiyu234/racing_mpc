@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch the learning MPC -->
+  <node pkg="learningmpc_nonlinear" name="gp_master" type="gp_master" output="screen">
+  </node>
+
+</launch>

@@ -54,7 +54,11 @@ CMAKE_BINARY_DIR = /home/sun234/racing_work/build
 include ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs.dir/progress.make
 
 ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpoutput.js
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpinput.js
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js
 ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js
+ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js
 
 
 /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
@@ -62,15 +66,43 @@ ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ltv_mpc/sample.msg"
 	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
 
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpoutput.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpoutput.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ltv_mpc/gpoutput.msg"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpinput.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpinput.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from ltv_mpc/gpinput.msg"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js: /home/sun234/racing_work/src/ltv_mpc/msg/gp_data.msg
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from ltv_mpc/gp_data.msg"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/gp_data.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
 /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg
 /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js: /home/sun234/racing_work/src/ltv_mpc/msg/sample.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from ltv_mpc/sample_lst.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from ltv_mpc/sample_lst.msg"
 	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/msg/sample_lst.msg -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg
+
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js: /home/sun234/racing_work/src/ltv_mpc/srv/gp_srv.srv
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpinput.msg
+/home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js: /home/sun234/racing_work/src/ltv_mpc/msg/gpoutput.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sun234/racing_work/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from ltv_mpc/gp_srv.srv"
+	cd /home/sun234/racing_work/build/ltv_mpc && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/sun234/racing_work/src/ltv_mpc/srv/gp_srv.srv -Iltv_mpc:/home/sun234/racing_work/src/ltv_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p ltv_mpc -o /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv
 
 ltv_mpc_generate_messages_nodejs: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs
 ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample.js
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpoutput.js
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gpinput.js
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/gp_data.js
 ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/msg/sample_lst.js
+ltv_mpc_generate_messages_nodejs: /home/sun234/racing_work/devel/share/gennodejs/ros/ltv_mpc/srv/gp_srv.js
 ltv_mpc_generate_messages_nodejs: ltv_mpc/CMakeFiles/ltv_mpc_generate_messages_nodejs.dir/build.make
 
 .PHONY : ltv_mpc_generate_messages_nodejs

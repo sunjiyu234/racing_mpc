@@ -68,17 +68,16 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -102,6 +101,18 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -123,17 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -348,6 +348,21 @@ LMPC_nonlinear/fast:
 .PHONY : LMPC_nonlinear/fast
 
 # Convenience name for target.
+learningmpc_nonlinear/CMakeFiles/gp_master.dir/rule:
+	cd /home/sun234/racing_work/build && $(MAKE) -f CMakeFiles/Makefile2 learningmpc_nonlinear/CMakeFiles/gp_master.dir/rule
+.PHONY : learningmpc_nonlinear/CMakeFiles/gp_master.dir/rule
+
+# Convenience name for target.
+gp_master: learningmpc_nonlinear/CMakeFiles/gp_master.dir/rule
+
+.PHONY : gp_master
+
+# fast build rule for target.
+gp_master/fast:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/build
+.PHONY : gp_master/fast
+
+# Convenience name for target.
 learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule:
 	cd /home/sun234/racing_work/build && $(MAKE) -f CMakeFiles/Makefile2 learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule
 .PHONY : learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/rule
@@ -362,32 +377,32 @@ record_init_ss_nonlinear/fast:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/record_init_ss_nonlinear.dir/build
 .PHONY : record_init_ss_nonlinear/fast
 
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.o: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.o: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.o
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.o
 
 # target to build an object file
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.o:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.o
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.o
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.o
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.o
 
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.i: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.i: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.i
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.i
 
 # target to preprocess a source file
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.i:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.i
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.i
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.i
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.i
 
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.s: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.s: src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.s
 
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.s
 
 # target to generate assembly for a file
-src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.s:
-	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.s
-.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.cpp.s
+src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.s
+.PHONY : src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.cpp.s
 
 src/gp_learn.o: src/gp_learn.cpp.o
 
@@ -396,6 +411,7 @@ src/gp_learn.o: src/gp_learn.cpp.o
 # target to build an object file
 src/gp_learn.cpp.o:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.o
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_learn.cpp.o
 .PHONY : src/gp_learn.cpp.o
 
 src/gp_learn.i: src/gp_learn.cpp.i
@@ -405,6 +421,7 @@ src/gp_learn.i: src/gp_learn.cpp.i
 # target to preprocess a source file
 src/gp_learn.cpp.i:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.i
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_learn.cpp.i
 .PHONY : src/gp_learn.cpp.i
 
 src/gp_learn.s: src/gp_learn.cpp.s
@@ -414,7 +431,35 @@ src/gp_learn.s: src/gp_learn.cpp.s
 # target to generate assembly for a file
 src/gp_learn.cpp.s:
 	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/build.make learningmpc_nonlinear/CMakeFiles/LMPC_nonlinear.dir/src/gp_learn.cpp.s
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_learn.cpp.s
 .PHONY : src/gp_learn.cpp.s
+
+src/gp_master.o: src/gp_master.cpp.o
+
+.PHONY : src/gp_master.o
+
+# target to build an object file
+src/gp_master.cpp.o:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_master.cpp.o
+.PHONY : src/gp_master.cpp.o
+
+src/gp_master.i: src/gp_master.cpp.i
+
+.PHONY : src/gp_master.i
+
+# target to preprocess a source file
+src/gp_master.cpp.i:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_master.cpp.i
+.PHONY : src/gp_master.cpp.i
+
+src/gp_master.s: src/gp_master.cpp.s
+
+.PHONY : src/gp_master.s
+
+# target to generate assembly for a file
+src/gp_master.cpp.s:
+	cd /home/sun234/racing_work/build && $(MAKE) -f learningmpc_nonlinear/CMakeFiles/gp_master.dir/build.make learningmpc_nonlinear/CMakeFiles/gp_master.dir/src/gp_master.cpp.s
+.PHONY : src/gp_master.cpp.s
 
 src/record_initial_safe_set_dspace_nonlinear_nodert.o: src/record_initial_safe_set_dspace_nonlinear_nodert.cpp.o
 
@@ -450,7 +495,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
+	@echo "... rebuild_cache"
 	@echo "... learningmpc_nonlinear_generate_messages_lisp"
 	@echo "... learningmpc_nonlinear_geneus"
 	@echo "... learningmpc_nonlinear_generate_messages_eus"
@@ -465,16 +510,20 @@ help:
 	@echo "... install/local"
 	@echo "... learningmpc_nonlinear_genlisp"
 	@echo "... LMPC_nonlinear"
+	@echo "... install"
+	@echo "... gp_master"
 	@echo "... record_init_ss_nonlinear"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.o"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.i"
-	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss.s"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.o"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.i"
+	@echo "... src/LMPC_dspace_nonlinear_nodert_noa_cal_delay_pre_cal_f_const_linear_ref_deal_startend_without_vehicle_change_ss_add_gp.s"
 	@echo "... src/gp_learn.o"
 	@echo "... src/gp_learn.i"
 	@echo "... src/gp_learn.s"
+	@echo "... src/gp_master.o"
+	@echo "... src/gp_master.i"
+	@echo "... src/gp_master.s"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.o"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.i"
 	@echo "... src/record_initial_safe_set_dspace_nonlinear_nodert.s"

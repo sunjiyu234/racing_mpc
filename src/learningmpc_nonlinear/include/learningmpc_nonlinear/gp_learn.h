@@ -22,6 +22,9 @@ class GP_Learn{
 public:
     /** Empty initialization*/
     GP_Learn(int input_dim, std::string cov1, std::string cov2, int max_num);
+    GP_Learn(const GP_Learn& gp_learn);
+
+    virtual ~GP_Learn();
     
     GaussianProcess * gp_;
     std::string cov_;
@@ -29,6 +32,7 @@ public:
     void SetParams(const Eigen::VectorXd &params);
     void AddPattern(const double x[], double y);
     double CalculateMu(const double x[]);
+    bool DataEnough();
     
 private:
     int max_num_;

@@ -1,0 +1,3 @@
+float64 v_error
+float64 r_error
+float64 beta_error

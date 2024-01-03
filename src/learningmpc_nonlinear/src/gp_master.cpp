@@ -71,22 +71,27 @@ void input_callback(const ltv_mpc::gp_data::ConstPtr &data_msg){
   double x_r_data[] = {data_input.v, data_input.r * 100.0, data_input.beta * 1000.0, data_input.Steer * 1000.0, data_input.Tf, data_input.Tr};
   double x_beta_data[] = {data_input.v, data_input.r * 100.0, data_input.beta * 1000.0, data_input.Steer * 1000.0, data_input.Tf, data_input.Tr};
 
-  gp_learn_v_->AddPattern(x_v_data, data_output.v_error * 10000.0);
-  gp_learn_r_->AddPattern(x_r_data, data_output.r_error * 1000.0);
-  gp_learn_beta_->AddPattern(x_beta_data, data_output.beta_error * 10000.0);
+  bool gp_add_v_ok = gp_learn_v_->AddPattern(x_v_data, data_output.v_error * 10000.0);
+  bool gp_add_r_ok = gp_learn_r_->AddPattern(x_r_data, data_output.r_error * 1000.0);
+  bool gp_add_beta_ok = gp_learn_beta_->AddPattern(x_beta_data, data_output.beta_error * 10000.0);
 
   marker_spin = 0;
   if (copy_use == 1){
     return;
   }else{
     marker_spin = 0;
-    delete gp_learn_v_copy_;
-    delete gp_learn_r_copy_;
-    delete gp_learn_beta_copy_;
-    gp_learn_v_copy_ = new GP_Learn(*gp_learn_v_);
-    gp_learn_r_copy_ = new GP_Learn(*gp_learn_r_);
-    gp_learn_beta_copy_ = new GP_Learn(*gp_learn_beta_);
-
+    if(gp_add_v_ok){
+      delete gp_learn_v_copy_;
+      gp_learn_v_copy_ = new GP_Learn(*gp_learn_v_);
+    }
+    if(gp_add_r_ok){
+      delete gp_learn_r_copy_;
+      gp_learn_r_copy_ = new GP_Learn(*gp_learn_r_);
+    }
+    if(gp_add_beta_ok){
+      delete gp_learn_beta_copy_;
+      gp_learn_beta_copy_ = new GP_Learn(*gp_learn_beta_);
+    }
     marker_spin = 1;
   }
 }

@@ -30,7 +30,7 @@ public:
     std::string cov_;
 
     void SetParams(const Eigen::VectorXd &params);
-    void AddPattern(const double x[], double y);
+    bool AddPattern(const double x[], double y);
     double CalculateMu(const double x[]);
     bool DataEnough();
     

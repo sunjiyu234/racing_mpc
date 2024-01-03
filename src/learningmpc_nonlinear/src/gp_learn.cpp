@@ -33,15 +33,13 @@ void GP_Learn::SetParams(const Eigen::VectorXd &params){
     gp_->covf().set_loghyper(params);
 }
 
-void GP_Learn::AddPattern(const double x[], double y){
-    double time_start_replace = clock();
+bool GP_Learn::AddPattern(const double x[], double y){
     if (gp_->get_sampleset_size() < max_num_){
-        gp_->add_pattern(x, y);
+        return gp_->add_pattern(x, y);
     }else{
-        gp_->replace_pattern(x, y);
+        return gp_->replace_pattern(x, y);
     }
-    double time_end_replace = clock();
-    std::cout << "Time_Add_Pattern = " << (time_end_replace  - time_start_replace)/CLOCKS_PER_SEC;
+    return false;
 }
 
 bool GP_Learn::DataEnough(){
